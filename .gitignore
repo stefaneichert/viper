@@ -1,0 +1,31 @@
+# sensitive data (except example files)
+instance/*
+!instance/example_*
+
+# cache
+__pycache__/*
+.cache
+
+# compiled files
+*.pyc
+
+# ide
+.idea
+venv
+
+#tests
+tests/cover/*
+tests/.coverage
+
+#vendor
+bitem/static/vendor/*
+bitem/static/vendor/node_modules/*
+bitem/static/vendor/node_modules
+!bitem/static/vendor/*.json
+**/node_modules
+
+#files
+bitem/static/images/jpgs/*
+
+
+/bitem/static/vendor/node_modules/
