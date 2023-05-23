@@ -5,7 +5,6 @@ from flask import Flask, Response
 app = Flask(__name__, instance_relative_config=True)
 app.config.from_object('config')
 app.config.from_pyfile('production.py')
-# babel = Babel(app)
 
 # pylint: disable=wrong-import-position, import-outside-toplevel
 from viper import views
@@ -13,6 +12,7 @@ from viper import views
 ROOT_PATH = Path(__file__).parent
 
 STATIC_PATH = ROOT_PATH / 'static'
+THANADOS_API = 'https://thanados.openatlas.eu/api'
 
 
 @app.after_request
