@@ -18,14 +18,14 @@ tests/cover/*
 tests/.coverage
 
 #vendor
-bitem/static/vendor/*
-bitem/static/vendor/node_modules/*
-bitem/static/vendor/node_modules
-!bitem/static/vendor/*.json
+viper/static/vendor/*
+viper/static/vendor/node_modules/*
+viper/static/vendor/node_modules
+!viper/static/vendor/*.json
 **/node_modules
 
 #files
-bitem/static/images/jpgs/*
+viper/static/images/jpgs/*
 
 
-/bitem/static/vendor/node_modules/
+/viper/static/vendor/node_modules/
