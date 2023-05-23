@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+    <Document>
+        <open>1</open>
+        <Folder>
+            <name>Test 1</name>
+            <open>1</open>
+            <Placemark>
+                <Style>
+                    <LineStyle>
+                        <color>7f9f7fe0</color>
+                        <width>5</width>
+                    </LineStyle>
+                    <PolyStyle>
+                        <color>ff000000</color>
+                        <width>6</width>
+                    </PolyStyle>
+                </Style>
+                <MultiGeometry>
+                    <Polygon>
+                        <outerBoundaryIs>
+                            <LinearRing>
+                                <coordinates>
+                                138.64,-34.93 138.64,-34.94 138.63,-34.94 138.62,-34.94
+                                </coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+        </Folder>
+    </Document>
+</kml>
