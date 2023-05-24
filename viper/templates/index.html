@@ -19,48 +19,17 @@
 
         <div class="timeline">
             <div class="outer">
-                <div class="card hovercard" id="1">
+                {% for row in moves %}
+                <div class="card hovercard" id="{{ row.id }}">
                     <div class="info">
-                        <h3 class="title">1859, June 23</h3>
-                        <h4>Title 1</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. </p>
-                        <img class="sidebar-img" src="https://thanados.openatlas.eu/api/display/196753.jpg">
+                        <h3 class="title"> {{ row.begin}} to {{ row.end }}</h3>
+                        <h4>{{ row['title']}}</h4>
+                        <p>{{ row['description'] }}</p>
+                        <img class="sidebar-img" src="{{ row.images['url']}}">
+
                     </div>
                 </div>
-                <div class="card">
-                    <div class="info">
-                        <h3 class="title">Title 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="info">
-                        <h3 class="title">Title 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="info">
-                        <h3 id="23" class="title">Title 4</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="info">
-                        <h3 class="title">Title 5</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. </p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
 

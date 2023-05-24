@@ -2,11 +2,15 @@ from flask import render_template
 
 from viper import app
 from viper.model.novara import get_novara_places, get_novara_moves
+import re
 
 
 @app.route('/')
 def about() -> str:
-    return render_template('index.html', placedata=get_novara_places())
+    moves = get_novara_moves()
+    for row in moves:
+        row['description'] = re.search('##en_;(.*)_en##', str(row['description']))
+    return render_template('index.html', placedata=get_novara_places(), moves=moves)
 
 
 @app.route('/novara/places')

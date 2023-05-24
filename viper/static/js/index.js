@@ -106,3 +106,19 @@ function updateGeojson() {
 
 PlaceMarker = updateGeojson()
     PlaceMarker.addTo(map)
+
+function getLanguage(data) {
+    if (data.description) {
+        let text = data.description;
+        if (text.includes('_##')) {
+            const mySubString = text.substring(
+                text.indexOf(`##en_##`) + 7,
+                text.lastIndexOf(`##_en##`)
+            );
+            text = mySubString;
+        }
+        return text;
+    } else {
+        return '';
+    }
+}
