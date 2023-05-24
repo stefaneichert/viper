@@ -2,6 +2,7 @@
   "dependencies": {
     "@openglobus/og": "^0.16.2",
     "@turf/turf": "^6.5.0",
+    "bootstrap": "^5.2.3",
     "leaflet": "^1.9.4",
     "leaflet-easybutton": "^2.4.0",
     "leaflet-sidebar": "^0.2.4",
