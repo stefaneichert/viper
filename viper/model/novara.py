@@ -1,9 +1,8 @@
 from typing import Any
-
+from datetime import datetime
 import requests
 
 from viper import app
-
 
 def get_novara_places() -> list[dict[str, Any]]:
     req = requests.get(
@@ -62,6 +61,12 @@ def get_novara_moves() -> list[dict[str, Any]]:
     moves = req_moves.json()['results']
     list_of_moves = []
     for move in moves:
+        begin = move['timespan']['begin_of_the_begin'].replace('T00:00:00', '')
+        end = move['timespan']['begin_of_the_end'].replace('T00:00:00', '')
+        begin_time = datetime.strptime(begin, '%Y-%m-%d')
+        end_time = datetime.strptime(end, '%Y-%m-%d')
+        begin_time_str = begin_time.strftime('%a %d %B %Y')
+        end_time_str = end_time.strftime('%a %d %B %Y')
         image_ =move['representation'][0]['digitally_shown_by'][0]
         place_from_id = move['moved_from'][0]['id'].rsplit('/', 1)[-1]
         place_to_id = move['moved_to'][0]['id'].rsplit('/', 1)[-1]
@@ -69,8 +74,8 @@ def get_novara_moves() -> list[dict[str, Any]]:
             'id': move['id'].rsplit('/', 1)[-1],
             'title': move['_label'],
             'description': move['content'],
-            'begin': move['timespan']['begin_of_the_begin'],
-            'end': move['timespan']['begin_of_the_end'],
+            'begin': begin_time_str,
+            'end': end_time_str,
             'images': {'title': image_['_label'], 'url': image_['id']},
             'place_from': place_ids[place_from_id],
             'place_to': place_ids[place_to_id]})
