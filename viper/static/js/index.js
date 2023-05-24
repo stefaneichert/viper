@@ -10,6 +10,10 @@ const OpenStreetMap = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
 
+const Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+});
+
 const Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     subdomains: 'abcd',
@@ -18,10 +22,18 @@ const Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net
     ext: 'jpg'
 });
 
+const Thunderforest_SpinalMap = L.tileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey={apikey}', {
+	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	apikey: 'b3c55fb5010a4038975fd0a0f4976e64',
+	maxZoom: 22
+});
+
 let baseMaps = {
     "OpenStreetMap": OpenStreetMap,
     "OSM Humanitarian": OpenStreetMap_HOT,
-    "Stamen Watercolor": Stamen_Watercolor
+    "Stamen Watercolor": Stamen_Watercolor,
+    "Satellite": Esri_WorldImagery,
+    "SpinalMap": Thunderforest_SpinalMap
 };
 
 L.control.layers(baseMaps).addTo(map);
@@ -68,7 +80,7 @@ function updateGeojson() {
         const type = element.types[0];
         const geom = element.geometry
         let images = "";
-        if (element.images !== "") images = '<img src="' +  element.images[0].url + '" style="max-width: 170px; max-height=170px">';
+        if (element.images !== "") images = '<br><br><img src="' +  element.images[0].url + '" style="max-width: 150px; max-height=170px">';
 
         if (!geom) return;
 
