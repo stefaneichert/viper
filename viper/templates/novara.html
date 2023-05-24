@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Novara</h1>
+
+{% for entity in entities %}
+<div>
+  {{ entity }}
+  <br>
+  <br>
+</div>
+{% endfor %}
+{% endblock %}
