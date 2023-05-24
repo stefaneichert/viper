@@ -1,50 +1,29 @@
 {% extends "layout.html" %}
 {% block content %}
-<html>
-<div id="globus" style="width:100%;height:100%"></div>
-<div style="position: absolute; left:0; padding:10px;">
-    <button id="btnOSM" style="float:left; margin: 3px;">OSM</button>
-    <button id="btnMQS" style="float:left; margin: 3px;">SAT</button>
-</div>
-<script type="module">
 
-    import {Globe} from './static/vendor/node_modules/@openglobus/og/src/og/Globe.js';
-    import {GlobusTerrain} from './static/vendor/node_modules/@openglobus/og/src/og/terrain/GlobusTerrain.js';
-    import {XYZ} from './static/vendor/node_modules/@openglobus/og/src/og/layer/XYZ.js';
-    import { SkyBox } from './static/vendor/node_modules/@openglobus/og/src/og/scene/SkyBox.js';
-
-    document.getElementById("btnOSM").onclick = function () {
-        osm.setVisibility(true);
-    };
-
-    document.getElementById("btnMQS").onclick = function () {
-        sat.setVisibility(true);
-    };
+    <link href="static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/vendor/node_modules/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="static/vendor/node_modules/leaflet-sidebar/src/L.Control.Sidebar.css"/>
+    <link rel="stylesheet" href="static/vendor/node_modules/leaflet-easybutton/src/easy-button.css"/>
+    <script src="static/vendor/node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="static/vendor/node_modules/leaflet-sidebar/src/L.Control.Sidebar.js"></script>
+    <script src="static/vendor/node_modules/leaflet-easybutton/src/easy-button.js"></script>
 
 
-    let osm = new XYZ("OpenStreetMap", {
-        isBaseLayer: true,
-        url: "//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        visibility: true,
-        attribution: 'Data @ OpenStreetMap contributors, ODbL'
-    });
+    <div id="map"></div>
+    <div id="sidebar">
+        <h1>Viennese perspectives on and perceptions of far away places</h1>
+        <img class="sidebar-img" src="https://thanados.openatlas.eu/api/display/196753.jpg">
+        <h2>The voyage of the Novara</h2>
 
-    let sat = new XYZ("MapBox Satellite", {
-        isBaseLayer: true,
-        url: "https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibWdldmxpY2hzY2FuZXgiLCJhIjoiY2pwcGdsaXlnMDQzdDQybXhsOWZlbXBvdSJ9.fR2YE-ehJA4iajaJBAPKvw",
-        visibility: false,
-        attribution: `Mapbox Sattelite`
-    });
+        <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 
-    let globus = new Globe({
-        "target": "globus",
-        "name": "Earth",
-        "terrain": new GlobusTerrain(),
-        "layers": [osm, sat],
-        "skybox": SkyBox.createDefault('../../res/'),
-        "sun": {
-		            "active": true
-		        }
-    });
-</script>
+        <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+        <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+
+
+
+    <script src="static/js/index.js"></script>
 {% endblock %}

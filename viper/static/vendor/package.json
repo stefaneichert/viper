@@ -1,5 +1,11 @@
 {
   "dependencies": {
-    "@openglobus/og": "^0.16.2"
+    "@openglobus/og": "^0.16.2",
+    "@turf/turf": "^6.5.0",
+    "leaflet": "^1.9.4",
+    "leaflet-easybutton": "^2.4.0",
+    "leaflet-sidebar": "^0.2.4",
+    "leaflet-sidebar-v2": "^3.2.3",
+    "mapbox-gl": "^2.14.1"
   }
 }
