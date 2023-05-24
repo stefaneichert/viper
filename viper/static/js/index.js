@@ -27,10 +27,10 @@ let baseMaps = {
 L.control.layers(baseMaps).addTo(map);
 
 let CircleStyle = {
-    "color": "#324c6b",
+    "color": "#000000",
     "weight": 1.5,
-    "fillOpacity": 0.8,
-    "fillColor": "#0088ce"
+    "fillOpacity": 0.95,
+    "fillColor": "#875eff"
 };
 let CircleStyleHover = {
     "color": "#324c6b",
@@ -52,3 +52,42 @@ setTimeout(function () {
 L.easyButton('<span>s</span>', function(btn, map){
     sidebar.toggle();
 }).addTo(map);
+
+function updateGeojson() {
+    let placeLayer = new L.geoJSON('', {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, CircleStyle);
+        },
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup(feature.properties.popupContent);
+        },
+    });
+
+    places.forEach((element) => {
+        const label = element.title;
+        const type = element.types[0];
+        const geom = element.geometry
+
+        if (!geom) return;
+
+
+
+            const popupContent = `<b>${label}</b><br>${type}`;
+            const geojsonFeature = {
+                type: "Feature",
+                id: element.id,
+                properties: {
+                    name: label,
+                    type: type,
+                    popupContent: popupContent
+                },
+                geometry: geom,
+            };
+            placeLayer.addData(geojsonFeature);
+
+    });
+    return placeLayer
+}
+
+PlaceMarker = updateGeojson()
+    PlaceMarker.addTo(map)
