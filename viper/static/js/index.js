@@ -67,12 +67,15 @@ function updateGeojson() {
         const label = element.title;
         const type = element.types[0];
         const geom = element.geometry
+        let images = "";
+        if (element.images !== "") images = '<img src="' +  element.images[0].url + '" style="max-width: 170px; max-height=170px">';
 
         if (!geom) return;
 
 
 
-            const popupContent = `<b>${label}</b><br>${type}`;
+            const popupContent = `<b>${label}</b><br>${type}` + images;
+            console.log(popupContent)
             const geojsonFeature = {
                 type: "Feature",
                 id: element.id,
