@@ -6,7 +6,7 @@ from viper.model.novara import get_novara_places, get_novara_moves
 
 @app.route('/')
 def about() -> str:
-    return render_template('index.html')
+    return render_template('index.html', placedata=get_novara_places())
 
 
 @app.route('/novara/places')

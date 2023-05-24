@@ -1,15 +1,16 @@
 {% extends "layout.html" %}
 {% block content %}
 
-    <link href="static/css/index.css" rel="stylesheet">
+
     <link rel="stylesheet" href="static/vendor/node_modules/leaflet/dist/leaflet.css"/>
     <link rel="stylesheet" href="static/vendor/node_modules/leaflet-sidebar/src/L.Control.Sidebar.css"/>
     <link rel="stylesheet" href="static/vendor/node_modules/leaflet-easybutton/src/easy-button.css"/>
     <script src="static/vendor/node_modules/leaflet/dist/leaflet.js"></script>
     <script src="static/vendor/node_modules/leaflet-sidebar/src/L.Control.Sidebar.js"></script>
     <script src="static/vendor/node_modules/leaflet-easybutton/src/easy-button.js"></script>
+    <link href="static/css/index.css" rel="stylesheet">
 
-
+     <script>places = {{ placedata|tojson }}</script>
     <div id="map"></div>
     <div id="sidebar">
         <h1>Viennese perspectives on and perceptions of far away places</h1>
@@ -18,12 +19,14 @@
 
         <div class="timeline">
             <div class="outer">
-                <div class="card">
+                <div class="card hovercard" id="1">
                     <div class="info">
-                        <h3 class="title">Title 1</h3>
+                        <h3 class="title">1859, June 23</h3>
+                        <h4>Title 1</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        <img class="sidebar-img" src="https://thanados.openatlas.eu/api/display/196753.jpg">
                     </div>
                 </div>
                 <div class="card">
@@ -44,7 +47,7 @@
                 </div>
                 <div class="card">
                     <div class="info">
-                        <h3 class="title">Title 4</h3>
+                        <h3 id="23" class="title">Title 4</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat. </p>

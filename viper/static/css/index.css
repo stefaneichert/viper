@@ -58,7 +58,7 @@ body {
 
 /* Setting the border of top, bottom, left */
 .card:nth-child(odd)::before {
-  left: 0px;
+  left: 0;
   top: -4.5px;
   bottom: -4.5px;
   border-width: 5px 0 5px 5px;
@@ -109,6 +109,13 @@ body {
   padding: 10px;
 }
 
+h1 {
+  padding: 0.5rem;
+}
+
+h2 {
+  padding: 0.3rem;
+}
 /* Title of the card */
 .title {
   color: #000000;
