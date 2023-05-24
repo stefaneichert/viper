@@ -65,8 +65,8 @@ def get_novara_moves() -> list[dict[str, Any]]:
         end = move['timespan']['begin_of_the_end'].replace('T00:00:00', '')
         begin_time = datetime.strptime(begin, '%Y-%m-%d')
         end_time = datetime.strptime(end, '%Y-%m-%d')
-        begin_time_str = begin_time.strftime('%a %d %b %Y')
-        end_time_str = end_time.strftime('%a %d %b %Y')
+        begin_time_str = begin_time.strftime('%a %d %B %Y')
+        end_time_str = end_time.strftime('%a %d %B %Y')
         image_ =move['representation'][0]['digitally_shown_by'][0]
         place_from_id = move['moved_from'][0]['id'].rsplit('/', 1)[-1]
         place_to_id = move['moved_to'][0]['id'].rsplit('/', 1)[-1]
