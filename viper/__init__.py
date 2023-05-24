@@ -12,7 +12,6 @@ from viper import views
 ROOT_PATH = Path(__file__).parent
 
 STATIC_PATH = ROOT_PATH / 'static'
-THANADOS_API = 'https://thanados.openatlas.eu/api'
 
 
 @app.after_request
