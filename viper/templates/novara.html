@@ -1,4 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
 <h1>Novara</h1>
+
+{% for place in places %}
+<div>
+  {{ place }}
+  <br>
+  <br>
+</div>
+{% endfor %}
 {% endblock %}
