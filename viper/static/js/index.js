@@ -241,7 +241,7 @@ Array.from(allCards).forEach((element) => {
 var novaraIcon = L.icon({
     iconUrl: 'static/icons/Novara.png',
     iconSize:     [80, 127], // size of the icon
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    iconAnchor:   [30, 150], // point of the icon which will correspond to marker's location
 });
 
 function flyto(id) {
