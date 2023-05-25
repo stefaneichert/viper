@@ -9,7 +9,9 @@ import re
 def about() -> str:
     moves = get_novara_moves()
     for row in moves:
-        row['description'] = re.search('##en_;(.*)_en##', str(row['description']))
+        result = re.search('##en_;(.*)_en##', str(row['description']))
+        if result:
+            row['description'] = result.group(1)
     return render_template('index.html', placedata=get_novara_places(), moves=moves)
 
 
