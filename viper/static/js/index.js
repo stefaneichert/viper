@@ -142,7 +142,7 @@ function getAkonData(id) {
 function getAnnoData(id) {
     let returnme = ''
     anno.forEach((elem) => {
-        if (elem.Id === parseInt(id)) {
+        if (elem.ID === parseInt(id)) {
             let label = elem.description
             let source = '<a href="'+ elem.link + '" target="_blank">' + elem.source + ' (' + elem.title + ', ' + elem.timestamp +', p.' + elem.page+')</a>'
             let type = elem.type;
