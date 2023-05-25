@@ -60,6 +60,11 @@ var sidebar = L.control.sidebar('sidebar', {
 });
 map.addControl(sidebar);
 
+var rightSidebar = L.control.sidebar('sidebar-right', {
+    position: 'right'
+});
+map.addControl(rightSidebar);
+
 setTimeout(function () {
 //    sidebar.show();
 }, 500);
@@ -80,18 +85,52 @@ var RouteStyle1 = {
     "opacity": 0.55
 };
 
+let hovermarkers = L.layerGroup().addTo(map)
+
 
 var geojson1 = L.geoJSON(routethere, {style: RouteStyle1}).addTo(map);
 var geojson2 = L.geoJSON(routeback, {style: RouteStyle1}).addTo(map);
+
+sidebar_r = document.getElementById('sidebar-right')
+
+function whenClicked(e) {
+    var visible = rightSidebar.isVisible();
+    if (visible === false) rightSidebar.show()
+    let id = e.target.feature.id;
+    let anchor = document.getElementById('card-' + id);
+    console.log(anchor)
+    if (anchor) anchor.scrollIntoView({behavior: "smooth", block: "end"})
+    setRightSidebar(id)
+}
+
+function setRightSidebar(id) {
+    places.forEach((element) => {
+        if (element.id === id) {
+            const label = element.title;
+            const pl_id = element.id;
+            const type = element.types[0];
+            let images = "";
+            if (element.images !== "") images = '<br><br><img src="' + element.images[0].url + '" class="sidebar-img">';
+            let popupContent = `<h1>${label}</h1><br><h3>${type}</h3>` + images;
+            sidebar_r.innerHTML = popupContent;
+
+        }
+    })
+}
+
+function onEachFeature(feature, layer) {
+    //bind click
+    layer.on({
+        click: whenClicked
+    });
+}
 
 function updateGeojson() {
     let placeLayer = new L.geoJSON('', {
         pointToLayer: function (feature, latlng) {
             return L.circleMarker(latlng, CircleStyle);
         },
-        onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties.popupContent);
-        },
+        onEachFeature: onEachFeature,
     });
 
     places.forEach((element) => {
@@ -106,7 +145,7 @@ function updateGeojson() {
 
 
         const popupContent = `<a href="#${pl_id}"><b>${label}</b></a><br>${type}` + images;
-        console.log(popupContent)
+
         const geojsonFeature = {
             type: "Feature",
             id: element.id,
@@ -167,7 +206,6 @@ function drawPolyline() {
 
     moves.forEach((element) => {
         let id = element.place_from;
-        console.log(id)
         places.forEach((place) => {
             if (place.id === id) {
                 if (place.geometry.coordinates) {
@@ -195,23 +233,28 @@ const allCards = document.getElementsByClassName('hovercard');
 Array.from(allCards).forEach((element) => {
     element.addEventListener("mouseover", () => {
         console.log((element.id))
-        flyto(element.id)
+        setRightSidebar((element.id).replace('card-', ''));
+        flyto((element.id).replace('card-', ''))
     }, false);
+});
+
+var novaraIcon = L.icon({
+    iconUrl: 'static/icons/Novara.png',
+    iconSize:     [80, 127], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
 });
 
 function flyto(id) {
     movement.forEach((element) => {
         if (element.id === id) {
+            hovermarkers.clearLayers()
+            let hoverpoint = L.marker(element.coords, {icon: novaraIcon})
+            hovermarkers.addLayer(hoverpoint)
             map.flyTo(element.coords, 8)
         }
     })
 }
 
-function scrollToelem(id) {
-    elem = document.getElementById(id)
-    console.log(elem)
-    elem.scrollIntoView({block: 'end', behavior: 'smooth'});
-}
 
 function getStarted() {
     toremove = document.getElementById('typetext-container')

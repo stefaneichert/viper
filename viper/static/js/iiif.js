@@ -1,5 +1,4 @@
 var mirador = Mirador.viewer({
-    "selectedTheme": "dark",
     "id": "my-mirador",
     "windows": [
         {

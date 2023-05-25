@@ -23,7 +23,7 @@
         <div class="timeline">
             <div class="outer">
                 {% for row in moves %}
-                <div class="card hovercard" id="{{ row.place_to }}" data-from="{{ row.place_from }}" data-to="{{ row.place_to }}">
+                <div class="card hovercard" id="card-{{ row.place_to }}" data-from="{{ row.place_from }}" data-to="{{ row.place_to }}">
                     <div class="info">
                         <h3 class="title"> {{ row.begin}} to {{ row.end }}</h3>
                         <h4>{{ row['title']}}</h4>
@@ -37,6 +37,7 @@
         </div>
 
     </div>
+    <div id="sidebar-right"></div>
     <div id="typetext-container"><span id="typetext" class="text-center"></span>
     <a onclick="getStarted()" class="d-none" id="begin">begin</a></div>
 
