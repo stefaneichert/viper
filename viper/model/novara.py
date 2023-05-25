@@ -1,8 +1,10 @@
-from typing import Any
 from datetime import datetime
+from typing import Any
+
 import requests
 
 from viper import app
+
 
 def get_novara_places() -> list[dict[str, Any]]:
     req = requests.get(
@@ -10,7 +12,8 @@ def get_novara_places() -> list[dict[str, Any]]:
         params={
             'type_id': 197085,
             'limit': 0,
-            'show': ['links', 'when', 'types', 'geometry', 'depictions']})
+            'show': ['links', 'when', 'types', 'geometry', 'depictions']},
+        timeout=30)
     list_of_places = []
     for place in req.json()['results']:
         entity = place['features'][0]
@@ -20,7 +23,8 @@ def get_novara_places() -> list[dict[str, Any]]:
             'description': entity['descriptions'][0]
             if entity['descriptions'] else '',
             'geometry': entity['geometry'],
-            'types': [item['label'] for item in entity['types'] if 'Place' in item['hierarchy']],
+            'types': [item['label'] for item in entity['types']
+                      if 'Place' in item['hierarchy']],
             'reference': [item['identifier'] for item in entity['links']]
             if entity['links'] else '',
             'images': [
@@ -32,33 +36,8 @@ def get_novara_places() -> list[dict[str, Any]]:
 
 
 def get_novara_moves() -> list[dict[str, Any]]:
-    req_places = requests.get(
-        f"{app.config['THANADOS_API']}/system_class/place",
-        params={
-            'type_id': 197085,
-            'format': 'loud',
-            'limit': 0})
-    places = req_places.json()['results']
-    place_ids = {}
-    for place in places:
-        location_id = place['former_or_current_location'][0]['id'].rsplit('/', 1)[-1]
-        place_id = place['id'].rsplit('/', 1)[-1]
-        place_ids[location_id] = place_id
-    req_expedition = requests.get(
-        f"{app.config['THANADOS_API']}/entity/196078",
-        params={'format': 'loud'})
-    move_ids = \
-        [move['id'].rsplit('/', 1)[-1]
-         for move in req_expedition.json()['part_of']]
-    req_moves = requests.get(
-        f"{app.config['THANADOS_API']}/query",
-        params={
-            'entities': move_ids,
-            'limit': 0,
-            'format': 'loud',
-            'column': 'begin_from',
-            'sort': 'asc'})
-    moves = req_moves.json()['results']
+    place_ids = get_places_for_move_events()
+    moves = get_moves()
     list_of_moves = []
     for move in moves:
         begin = move['timespan']['begin_of_the_begin'].replace('T00:00:00', '')
@@ -67,7 +46,7 @@ def get_novara_moves() -> list[dict[str, Any]]:
         end_time = datetime.strptime(end, '%Y-%m-%d')
         begin_time_str = begin_time.strftime('%a %d %B %Y')
         end_time_str = end_time.strftime('%a %d %B %Y')
-        image_ =move['representation'][0]['digitally_shown_by'][0]
+        image_ = move['representation'][0]['digitally_shown_by'][0]
         place_from_id = move['moved_from'][0]['id'].rsplit('/', 1)[-1]
         place_to_id = move['moved_to'][0]['id'].rsplit('/', 1)[-1]
         list_of_moves.append({
@@ -79,5 +58,42 @@ def get_novara_moves() -> list[dict[str, Any]]:
             'images': {'title': image_['_label'], 'url': image_['id']},
             'place_from': place_ids[place_from_id],
             'place_to': place_ids[place_to_id]})
-
     return list_of_moves
+
+
+def get_places_for_move_events() -> dict[int, int]:
+    req_places = requests.get(
+        f"{app.config['THANADOS_API']}/system_class/place",
+        params={
+            'type_id': 197085,
+            'format': 'loud',
+            'limit': 0},
+        timeout=30)
+    places = req_places.json()['results']
+    place_ids = {}
+    for place in places:
+        location_id = \
+            place['former_or_current_location'][0]['id'].rsplit('/', 1)[-1]
+        place_id = place['id'].rsplit('/', 1)[-1]
+        place_ids[location_id] = place_id
+    return place_ids
+
+
+def get_moves() -> list[dict[str, Any]]:
+    req_expedition = requests.get(
+        f"{app.config['THANADOS_API']}/entity/196078",
+        params={'format': 'loud'},
+        timeout=30)
+    move_ids = \
+        [move['id'].rsplit('/', 1)[-1]
+         for move in req_expedition.json()['part_of']]
+    req_moves = requests.get(
+        f"{app.config['THANADOS_API']}/query",
+        params={
+            'entities': move_ids,
+            'limit': 0,
+            'format': 'loud',
+            'column': 'begin_from',
+            'sort': 'asc'},
+        timeout=30)
+    return req_moves.json()['results']
