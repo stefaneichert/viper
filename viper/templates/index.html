@@ -10,9 +10,1192 @@
     <script src="static/vendor/node_modules/leaflet-easybutton/src/easy-button.js"></script>
     <script src="/static/vendor/node_modules/typed.js/dist/typed.umd.js"></script>
     <link href="static/css/index.css" rel="stylesheet">
+    <script src="static/js/akon.js"></script>
+    <script src="static/js/anno.js"></script>
 
- <script>places = [{"description": "", "geometry": {"coordinates": [77.600894797, -37.855599075], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196145", "images": [{"title": "Amsterdam Island 1857", "url": "https://thanados.openatlas.eu/api/display/196426"}, {"title": "V St. Paul Island to Ceylon", "url": "https://thanados.openatlas.eu/api/display/196391"}], "reference": ["https://www.geonames.org/1547220", "https://www.wikidata.org/entity/Q194215"], "title": "Amsterdam Island", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [150.78644, -34.20347], "description": "Appin (2177806), imported from GeoNames", "shapeType": "centerpoint", "title": "Appin", "type": "Point"}, "id": "196764", "images": [{"title": "Appin (Australia) 1858", "url": "https://thanados.openatlas.eu/api/display/196763"}], "reference": ["https://www.geonames.org/2177806", "https://www.wikidata.org/entity/Q770484"], "title": "Appin", "types": ["Town"]}, {"description": "", "geometry": {"coordinates": [92.85833, 8.8274], "description": "Batti Malv Island (1276692), imported from GeoNames", "shapeType": "centerpoint", "title": "Batti Malv Island", "type": "Point"}, "id": "198037", "images": [{"title": "Battimalv Island 1858", "url": "https://thanados.openatlas.eu/api/display/196689"}], "reference": ["Battimalv Island", "Insel Battimalv", "https://www.wikidata.org/entity/Q26791686"], "title": "Battimalv Island", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [-5.43333, 36.15], "description": "Bay of Gibraltar (2411584), imported from GeoNames", "shapeType": "centerpoint", "title": "Bay of Gibraltar", "type": "Point"}, "id": "196098", "images": [{"title": "Gibraltar 1857/1", "url": "https://thanados.openatlas.eu/api/display/196379"}, {"title": "Gibraltar 1857/2", "url": "https://thanados.openatlas.eu/api/display/196380"}, {"title": "I Trieste to Madeira", "url": "https://thanados.openatlas.eu/api/display/196387"}, {"title": "South Gate of Gibraltar 1857", "url": "https://thanados.openatlas.eu/api/display/196381"}, {"title": "XIX Valpara\u00edso to Gibraltar", "url": "https://thanados.openatlas.eu/api/display/196407"}, {"title": "XX Gibraltar to Trieste", "url": "https://thanados.openatlas.eu/api/display/196408"}], "reference": ["https://www.geonames.org/2411584", "https://www.wikidata.org/entity/Q2142350"], "title": "Bay of Gibraltar", "types": ["Bay"]}, {"description": "", "geometry": {"coordinates": [93.5, 8.13333], "description": "Camorta Island (1274998), imported from GeoNames", "shapeType": "centerpoint", "title": "Camorta Island", "type": "Point"}, "id": "196697", "images": [{"title": "Camorta Island 1858", "url": "https://thanados.openatlas.eu/api/display/196700"}], "reference": ["https://www.geonames.org/1274998", "https://www.wikidata.org/entity/Q26791426"], "title": "Camorta Island", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [92.755075798, 9.227372137], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196178", "images": [{"title": "Sawi Bay 1858", "url": "https://thanados.openatlas.eu/api/display/196429"}, {"title": "Sawi Village 1858", "url": "https://thanados.openatlas.eu/api/display/196430"}, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}, {"title": "VII Madras to Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196393"}], "reference": ["https://www.geonames.org/1274969", "https://www.wikidata.org/entity/Q1035273"], "title": "Car Nicobar", "types": ["Island"]}, {"description": "", "geometry": {"geometries": [{"coordinates": [93.04768, 8.45386], "description": "Chowra Island (1273958), imported from GeoNames", "shapeType": "centerpoint", "title": "Chowra Island", "type": "Point"}, {"coordinates": [93.04768, 8.45386], "description": "Chowra Island (1273958), imported from GeoNames", "shapeType": "centerpoint", "title": "Chowra Island", "type": "Point"}], "type": "GeometryCollection"}, "id": "196180", "images": [{"title": "Islands Teressa and Chowra 1858", "url": "https://thanados.openatlas.eu/api/display/196702"}, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}], "reference": ["Chowra Island", "https://www.geonames.org/1273958", "Insel Chowra", "https://www.wikidata.org/entity/Q1076829"], "title": "Chowra Island", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [93.86667, 6.8], "description": "South Bay (1255688), imported from GeoNames", "shapeType": "centerpoint", "title": "South Bay", "type": "Point"}, "id": "196205", "images": [{"title": "IX Nicobar Islands to Singapore", "url": "https://thanados.openatlas.eu/api/display/196395"}, {"title": "Nicobar Islands 1858", "url": "https://thanados.openatlas.eu/api/display/196705"}, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}], "reference": ["https://www.geonames.org/1255688", "https://www.wikidata.org/entity/Q2979723"], "title": "Galathea Bay (Great Nicobar)", "types": ["Bay"]}, {"description": "", "geometry": {"coordinates": [107.278740957, -2.868978564], "description": "Gaspar Strait (1644273), imported from GeoNames", "shapeType": "centerpoint", "title": "Gaspar Strait", "type": "Point"}, "id": "196212", "images": [{"title": "X Singapore to Batavia", "url": "https://thanados.openatlas.eu/api/display/196396"}], "reference": ["https://www.geonames.org/1644273", "https://www.wikidata.org/entity/Q2078615"], "title": "Gaspar Strait", "types": ["Strait"]}, {"description": "", "geometry": {"coordinates": [113.25, 23.11667], "description": "Guangzhou (1809858), imported from GeoNames", "shapeType": "centerpoint", "title": "Guangzhou", "type": "Point"}, "id": "198040", "images": "", "reference": ["Guangzhou", "https://www.geonames.org/1809858", "https://www.wikidata.org/entity/Q16572"], "title": "Guangzhou", "types": ["Metropolis"]}, {"description": "", "geometry": {"coordinates": [93.721101454, 7.1984419], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196199", "images": [{"title": "IX Nicobar Islands to Singapore", "url": "https://thanados.openatlas.eu/api/display/196395"}, {"title": "Nicobar Islands 1858", "url": "https://thanados.openatlas.eu/api/display/196705"}, {"title": "St. Georgs Kanal 1858", "url": "https://thanados.openatlas.eu/api/display/196709"}, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}], "reference": ["https://www.geonames.org/1266197", "https://www.wikidata.org/entity/Q24040535"], "title": "Kondul Island (Great Nicobar)", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [93.702778252, 7.397165448], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196197", "images": [{"title": "Nicobar Islands 1858", "url": "https://thanados.openatlas.eu/api/display/196705"}, {"title": "Pulomilo Island 1858", "url": "https://thanados.openatlas.eu/api/display/196706"}, {"title": "St. Georgs Kanal 1858", "url": "https://thanados.openatlas.eu/api/display/196709"}, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}], "reference": ["https://www.geonames.org/1264874", "https://www.wikidata.org/entity/Q730896"], "title": "Little Nicobar Island", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [93.524247154, 8.014516793], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196188", "images": [{"title": "Camorta Island 1858", "url": "https://thanados.openatlas.eu/api/display/196700"}, {"title": "Nancowry Island 1858", "url": "https://thanados.openatlas.eu/api/display/196696"}, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}], "reference": ["https://www.geonames.org/1261993", "https://www.wikidata.org/entity/Q1964467"], "title": "Nancowry Island", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [158.159757922, 6.809052749], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196227", "images": [{"title": "Pohnpei Island 1858", "url": "https://thanados.openatlas.eu/api/display/196759"}, {"title": "XIV Shanghai to Micronesia", "url": "https://thanados.openatlas.eu/api/display/196402"}, {"title": "XV Micronesia to Sydney", "url": "https://thanados.openatlas.eu/api/display/196403"}], "reference": ["https://www.geonames.org/2081551", "https://www.wikidata.org/entity/Q319836"], "title": "Pohnpei Island", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [174.768876416, -36.836482658], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196234", "images": [{"title": "Auckland 1958/1859", "url": "https://thanados.openatlas.eu/api/display/196766"}, {"title": "XVII Auckland to Tahiti", "url": "https://thanados.openatlas.eu/api/display/196405"}, {"title": "XVI Sydney to Auckland", "url": "https://thanados.openatlas.eu/api/display/196404"}], "reference": ["https://www.geonames.org/10069270", "https://www.wikidata.org/entity/Q37100"], "title": "Port of Auckland", "types": ["Port"]}, {"description": "", "geometry": {"coordinates": [120.91333949, 14.487488389], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196217", "images": [{"title": "Manila 1858a", "url": "https://thanados.openatlas.eu/api/display/196718"}, {"title": "Manila 1858b", "url": "https://thanados.openatlas.eu/api/display/196719"}, {"title": "XI Batavia to Manila", "url": "https://thanados.openatlas.eu/api/display/196397"}, {"title": "XII Manila to Hong Kong", "url": "https://thanados.openatlas.eu/api/display/196398"}], "reference": ["https://www.geonames.org/1717641", "https://www.wikidata.org/entity/Q1482"], "title": "Port of Cavite (Manila)", "types": ["Port"]}, {"description": "", "geometry": {"coordinates": [80.29782662, 13.07623599], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196175", "images": [{"title": "Temple 1858", "url": "https://thanados.openatlas.eu/api/display/196428"}, {"title": "VI Ceylon to Madras", "url": "https://thanados.openatlas.eu/api/display/196392"}, {"title": "VII Madras to Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196393"}], "reference": ["https://www.geonames.org/11101740", "https://www.wikidata.org/entity/Q1352"], "title": "Port of Chennai", "types": ["Port"]}, {"description": "", "geometry": {"coordinates": [-16.915248126, 32.6405667], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196115", "images": [{"title": "Funchal (Madeira) 1857", "url": "https://thanados.openatlas.eu/api/display/196418"}, {"title": "Loo Rock (Madeira) 1857", "url": "https://thanados.openatlas.eu/api/display/197721"}], "reference": ["https://www.geonames.org/2267827", "https://www.wikidata.org/entity/Q10351973"], "title": "Port of Funchal (Madeira)", "types": ["Port"]}, {"description": "", "geometry": {"coordinates": [80.218605537, 6.030468654], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196157", "images": [{"title": "Point de Galle 1858", "url": "https://thanados.openatlas.eu/api/display/196427"}, {"title": "VI Ceylon to Madras", "url": "https://thanados.openatlas.eu/api/display/196392"}, {"title": "V St. Paul Island to Ceylon", "url": "https://thanados.openatlas.eu/api/display/196391"}], "reference": ["https://www.geonames.org/1246294", "https://www.wikidata.org/entity/Q319366"], "title": "Port of Galle (Sri Lanka)", "types": ["Port"]}, {"description": "", "geometry": {"coordinates": [114.170264383, 22.289383066], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196222", "images": [{"title": "Hong Kong 1858a", "url": "https://thanados.openatlas.eu/api/display/196720"}, {"title": "Hong Kong 1858b", "url": "https://thanados.openatlas.eu/api/display/196721"}, {"title": "XIII Hong Kong to Shanghai", "url": "https://thanados.openatlas.eu/api/display/196399"}, {"title": "XII Manila to Hong Kong", "url": "https://thanados.openatlas.eu/api/display/196398"}], "reference": ["https://www.geonames.org/11791597", "https://www.wikidata.org/entity/Q8646"], "title": "Port of Hong Kong", "types": ["Port"]}, {"description": "", "geometry": {"coordinates": [106.773696624, -6.086244903], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196214", "images": [{"title": "Jakarta 1858a", "url": "https://thanados.openatlas.eu/api/display/196716"}, {"title": "Jakarta 1858b", "url": "https://thanados.openatlas.eu/api/display/196717"}, {"title": "XI Batavia to Manila", "url": "https://thanados.openatlas.eu/api/display/196397"}, {"title": "X Singapore to Batavia", "url": "https://thanados.openatlas.eu/api/display/196396"}], "reference": ["https://www.geonames.org/11549302", "https://www.wikidata.org/entity/Q3630"], "title": "Port of Jakarta", "types": ["Port"]}, {"description": "", "geometry": {"coordinates": [-149.587611857, -17.541985262], "description": "Tahiti (4033649), imported from GeoNames", "shapeType": "centerpoint", "title": "Tahiti", "type": "Point"}, "id": "196409", "images": [{"title": "Lake Vaihiria 1859", "url": "https://thanados.openatlas.eu/api/display/196871"}, {"title": "Port of Papeete 1859", "url": "https://thanados.openatlas.eu/api/display/196769"}, {"title": "Tahiti 1859", "url": "https://thanados.openatlas.eu/api/display/196873"}, {"title": "Tahiti landscape 1859", "url": "https://thanados.openatlas.eu/api/display/196870"}, {"title": "Tahiti landscape 1859b", "url": "https://thanados.openatlas.eu/api/display/196872"}, {"title": "Tahiti um 1859", "url": "https://thanados.openatlas.eu/api/display/196869"}], "reference": ["https://www.geonames.org/4033649", "https://www.wikidata.org/entity/Q42000"], "title": "Port of Papeete (Tahiti)", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [-43.16734418, -22.9015346], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196117", "images": [{"title": "Rio de Janeiro 1857", "url": "https://thanados.openatlas.eu/api/display/196419"}], "reference": ["https://www.geonames.org/3451190", "https://www.wikidata.org/entity/Q525922"], "title": "Port of Rio de Janeiro", "types": ["Port"]}, {"description": "", "geometry": {"coordinates": [121.339855849, 31.535992082], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196224", "images": [{"title": "Shanghai 1858", "url": "https://thanados.openatlas.eu/api/display/196738"}, {"title": "XIII Hong Kong to Shanghai", "url": "https://thanados.openatlas.eu/api/display/196399"}, {"title": "XIV Shanghai to Micronesia", "url": "https://thanados.openatlas.eu/api/display/196402"}], "reference": ["https://www.geonames.org/1796236", "https://www.wikidata.org/entity/Q8686"], "title": "Port of Shanghai", "types": ["Port"]}, {"description": "", "geometry": {"coordinates": [18.431323743, -34.188915824], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196133", "images": [{"title": "Cape of Storms 1857", "url": "https://thanados.openatlas.eu/api/display/196420"}, {"title": "Cape Town 1857", "url": "https://thanados.openatlas.eu/api/display/196421"}], "reference": ["https://www.geonames.org/3361618", "https://www.wikidata.org/entity/Q1013370"], "title": "Port of Simon\u0027s Town (Cape Town)", "types": ["Port"]}, {"description": "", "geometry": {"coordinates": [103.856850918, 1.254725585], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196210", "images": [{"title": "IX Nicobar Islands to Singapore", "url": "https://thanados.openatlas.eu/api/display/196395"}, {"title": "Singapore 1858a", "url": "https://thanados.openatlas.eu/api/display/196714"}, {"title": "Singapore 1858b", "url": "https://thanados.openatlas.eu/api/display/196715"}, {"title": "X Singapore to Batavia", "url": "https://thanados.openatlas.eu/api/display/196396"}], "reference": ["https://www.geonames.org/1885154", "https://www.wikidata.org/entity/Q1421994"], "title": "Port of Singapore", "types": ["Port"]}, {"description": "", "geometry": {"coordinates": [151.213159242, -33.854832376], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196232", "images": [{"title": "Appin (Australia) 1858", "url": "https://thanados.openatlas.eu/api/display/196763"}, {"title": "Sydney 1858", "url": "https://thanados.openatlas.eu/api/display/196762"}, {"title": "XVI Sydney to Auckland", "url": "https://thanados.openatlas.eu/api/display/196404"}, {"title": "XV Micronesia to Sydney", "url": "https://thanados.openatlas.eu/api/display/196403"}], "reference": ["https://www.geonames.org/2147714", "https://www.wikidata.org/entity/Q3130"], "title": "Port of Sydney", "types": ["Port"]}, {"description": "", "geometry": {"coordinates": [13.770929465, 45.631426845], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196065", "images": [{"title": "Trieste 1859", "url": "https://thanados.openatlas.eu/api/display/196883"}], "reference": ["https://www.geonames.org/9796929", "https://www.wikidata.org/entity/Q1567848"], "title": "Port of Trieste", "types": ["Port"]}, {"description": "", "geometry": {"coordinates": [-71.623641538, -33.034351075], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196412", "images": [{"title": "Valpara\u00edso 1859a", "url": "https://thanados.openatlas.eu/api/display/196877"}, {"title": "Valpara\u00edso 1859b", "url": "https://thanados.openatlas.eu/api/display/196878"}], "reference": ["https://www.geonames.org/3868626", "https://www.wikidata.org/entity/Q33986"], "title": "Port of Valpara\u00edso", "types": ["Town"]}, {"description": "", "geometry": {"coordinates": [-12.398736314, -34.082237152], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196284", "images": "", "reference": "", "title": "Position of Novara 300 nautical miles north of Tristan da Cunha", "types": ["Position"]}, {"description": "", "geometry": {"coordinates": [13.84806, 44.86833], "description": "Pula (3192224), imported from GeoNames", "shapeType": "centerpoint", "title": "Pula", "type": "Point"}, "id": "196887", "images": [{"title": "Pula 1859a", "url": "https://thanados.openatlas.eu/api/display/196890"}, {"title": "Pula 1859b", "url": "https://thanados.openatlas.eu/api/display/196891"}], "reference": ["https://www.geonames.org/3192224", "https://www.wikidata.org/entity/Q4656"], "title": "Pula", "types": ["Town"]}, {"description": "", "geometry": {"coordinates": [93.68711, 7.40332], "description": "Pulomilo Island (1263045), imported from GeoNames", "shapeType": "centerpoint", "title": "Pulomilo Island", "type": "Point"}, "id": "196707", "images": [{"title": "Nicobar Islands 1858", "url": "https://thanados.openatlas.eu/api/display/196705"}, {"title": "Pulomilo Island 1858", "url": "https://thanados.openatlas.eu/api/display/196706"}, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}], "reference": ["https://www.geonames.org/1263045"], "title": "Pulomilo Island", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [14.72443, 36.92574], "description": "Ragusa (2523650), imported from GeoNames", "shapeType": "centerpoint", "title": "Ragusa", "type": "Point"}, "id": "196884", "images": [{"title": "Ragusa 1859", "url": "https://thanados.openatlas.eu/api/display/196886"}], "reference": ["https://www.geonames.org/2523650", "https://www.wikidata.org/entity/Q13674"], "title": "Ragusa", "types": ["Town"]}, {"description": "", "geometry": {"coordinates": [77.528413954, -38.720573543], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196141", "images": [{"title": "Saint Paul Island 1857", "url": "https://thanados.openatlas.eu/api/display/196422"}, {"title": "Saint Paul Island Barre 1857", "url": "https://thanados.openatlas.eu/api/display/196424"}, {"title": "Saint Paul Island Cabin 1857", "url": "https://thanados.openatlas.eu/api/display/196425"}, {"title": "Saint Paul Island Karte 1857", "url": "https://thanados.openatlas.eu/api/display/196423"}], "reference": ["https://www.geonames.org/1545990", "https://www.wikidata.org/entity/Q204821"], "title": "Saint Paul Island", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [-70.64827, -33.45694], "description": "Santiago (3871336), imported from GeoNames", "shapeType": "centerpoint", "title": "Santiago", "type": "Point"}, "id": "196874", "images": [{"title": "On the way to Santiago de Chile 1859", "url": "https://thanados.openatlas.eu/api/display/196880"}, {"title": "Santiago de Chile 1859", "url": "https://thanados.openatlas.eu/api/display/196879"}], "reference": ["https://www.geonames.org/3871336", "https://www.wikidata.org/entity/Q2887"], "title": "Santiago de Chile", "types": ["Metropolis"]}, {"description": "", "geometry": {"coordinates": [18.778047386, 40.095743887], "description": "", "shapeType": "centerpoint", "title": "", "type": "Point"}, "id": "196079", "images": "", "reference": ["https://www.geonames.org/3171784", "https://www.wikidata.org/entity/Q367993"], "title": "Southern Adriatic Sea near Capo d\u0027Otranto", "types": ["Waterbody"]}, {"description": "", "geometry": {"coordinates": [162.87051, -8.39672], "description": "Stewart Islands (2103300), imported from GeoNames", "shapeType": "centerpoint", "title": "Stewart Islands", "type": "Point"}, "id": "196230", "images": [{"title": "Sikaiana 1858", "url": "https://thanados.openatlas.eu/api/display/196761"}], "reference": ["https://www.geonames.org/2103300", "https://www.wikidata.org/entity/Q49296718"], "title": "Stewart Islands (Solomon Islands)", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [-5.6, 35.95], "description": "Strait of Gibraltar (2363256), imported from GeoNames", "shapeType": "centerpoint", "title": "Strait of Gibraltar", "type": "Point"}, "id": "196112", "images": [{"title": "I Trieste to Madeira", "url": "https://thanados.openatlas.eu/api/display/196387"}, {"title": "Novara in Strait of Gibraltar 1859", "url": "https://thanados.openatlas.eu/api/display/196881"}, {"title": "XIX Valpara\u00edso to Gibraltar", "url": "https://thanados.openatlas.eu/api/display/196407"}, {"title": "XX Gibraltar to Trieste", "url": "https://thanados.openatlas.eu/api/display/196408"}], "reference": ["https://www.geonames.org/2363256", "https://www.wikidata.org/entity/Q36124"], "title": "Strait of Gibraltar", "types": ["Strait"]}, {"description": "", "geometry": {"coordinates": [98.432063456, 6.844623672], "description": "Strait of Malacca (1818192), imported from GeoNames", "shapeType": "centerpoint", "title": "Strait of Malacca", "type": "Point"}, "id": "196208", "images": [{"title": "IX Nicobar Islands to Singapore", "url": "https://thanados.openatlas.eu/api/display/196395"}], "reference": ["Strait of Malacca", "https://www.geonames.org/1818192", "Stra\u00dfe von Malakka", "https://www.wikidata.org/entity/Q48359"], "title": "Strait of Malacca", "types": ["Strait"]}, {"description": "", "geometry": {"coordinates": [15.6411, 38.24681], "description": "Strait of Messina (2524168), imported from GeoNames", "shapeType": "centerpoint", "title": "Strait of Messina", "type": "Point"}, "id": "196093", "images": "", "reference": ["https://www.geonames.org/2524168", "https://www.wikidata.org/entity/Q134705"], "title": "Strait of Messina", "types": ["Strait"]}, {"description": "", "geometry": {"coordinates": [93.11565, 8.2594], "description": "Teressa Island (1254894), imported from GeoNames", "shapeType": "centerpoint", "title": "Teressa Island", "type": "Point"}, "id": "196703", "images": [{"title": "Islands Teressa and Chowra 1858", "url": "https://thanados.openatlas.eu/api/display/196702"}], "reference": ["https://www.geonames.org/1254894", "https://www.wikidata.org/entity/Q2307156"], "title": "Teressa Island", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [93.61667, 8.5], "description": "Tillanch\u0101ng Dw\u012bp (1254477), imported from GeoNames", "shapeType": "centerpoint", "title": "Tillanch\u0101ng Dw\u012bp", "type": "Point"}, "id": "196184", "images": [{"title": "Tillangchong Island 1858a", "url": "https://thanados.openatlas.eu/api/display/196694"}, {"title": "Tillangchong Island 1858b", "url": "https://thanados.openatlas.eu/api/display/196695"}, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}], "reference": ["https://www.geonames.org/1254477", "https://www.wikidata.org/entity/Q3528508"], "title": "Tillangchong Island", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [93.6481, 7.47358], "description": "Treis Island (1254193), imported from GeoNames", "shapeType": "centerpoint", "title": "Treis Island", "type": "Point"}, "id": "196193", "images": [{"title": "Nicobar Islands 1858", "url": "https://thanados.openatlas.eu/api/display/196705"}, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}], "reference": ["https://www.geonames.org/1254193", "https://www.wikidata.org/entity/Q26778815"], "title": "Treis Island", "types": ["Island"]}, {"description": "", "geometry": {"coordinates": [13.77678, 45.64953], "description": "Trieste (3165185), imported from GeoNames", "shapeType": "centerpoint", "title": "Trieste", "type": "Point"}, "id": "196365", "images": [{"title": "Trieste 1859", "url": "https://thanados.openatlas.eu/api/display/196883"}], "reference": ["https://www.geonames.org/3165185", "https://www.wikidata.org/entity/Q546"], "title": "Trieste", "types": ["Town"]}, {"description": "", "geometry": {"coordinates": [-12.28284, -37.10573], "description": "Tristan da Cunha (3370682), imported from GeoNames", "shapeType": "centerpoint", "title": "Tristan da Cunha", "type": "Point"}, "id": "196126", "images": "", "reference": ["https://www.geonames.org/3370682", "https://www.wikidata.org/entity/Q2454241"], "title": "Tristan da Cunha (Saint Helena)", "types": ["Island"]}]</script>
-     <script>moves = [{"begin": "Thu 30 April 1857", "description": "On its first part of the journey, the frigate Novara sails from Trieste into the southern Arctic Sea and at noon on 3 May 1857 reaches the height of Otranto. ", "end": "Sun 03 May 1857", "id": "196081", "images": {"title": "I Trieste to Madeira", "url": "https://thanados.openatlas.eu/api/display/196387"}, "place_from": "196065", "place_to": "196079", "title": "The Novara sails from Trieste to the Southern Adriatic Sea"}, {"begin": "Sun 03 May 1857", "description": "On the morning of 6 May 1857, the Novara lay in front of the entrance to the Strait of Messina, but could not enter the Strait due to a strong north-westerly wind until the morning of 7 May, when the wind finally calmed down. Eventually, at 8 a.m., the steamer Lucia, coming from Corfu, reached them, which took the frigate Novara and the accompanying corvette Carolina in tow again and towed the two ships through the Strait of Messina. ", "end": "Wed 06 May 1857", "id": "196095", "images": {"title": "I Trieste to Madeira", "url": "https://thanados.openatlas.eu/api/display/196387"}, "place_from": "196079", "place_to": "196093", "title": "The Novara sails from the Southern Adriatic Sea to the Strait of Messina"}, {"begin": "Thu 07 May 1857", "description": "After passing the Strait of Messina, the Stromboli becomes visible on the evening of 7 May, the coast of Sardinia on 11 May and the coast of North Africa from 13 May onwards. The Carolina left the Novara on 12 May and was not due to arrive in Gibraltar until 23 May, whereas the Novara reached Gibraltar in the afternoon of 20 May 1857. ", "end": "Wed 20 May 1857", "id": "196238", "images": {"title": "I Trieste to Madeira", "url": "https://thanados.openatlas.eu/api/display/196387"}, "place_from": "196093", "place_to": "196098", "title": "The Novara sails from the Strait of Messina to the Bay of Gibraltar"}, {"begin": "Sat 30 May 1857", "description": "The Novara had already been waiting for favourable winds for two days, until an easterly wind finally arose on the morning of 20 May and the anchor could be weighed. However, the wind remained unfavourable and delayed the onward journey. So on 1 June, the Novara had to drop anchor a few nautical miles west of the Bay of Malaga off the Spanish Castell de Fuengirola and wait for better conditions. Finally, the wind shifted and on 3 June 1857, the Novara was able to pass through the Strait of Gibraltar together with numerous other ships. ", "end": "Wed 03 June 1857", "id": "196242", "images": {"title": "I Trieste to Madeira", "url": "https://thanados.openatlas.eu/api/display/196387"}, "place_from": "196098", "place_to": "196112", "title": "The Novara sails from the Bay of Gibraltar to the Strait of Gibraltar"}, {"begin": "Wed 03 June 1857", "description": "After crossing the Strait of Gibraltar, both the Novara and the Carolina reached Madeira on 8 June 1857. They anchored at 32 fathoms deep, south of the Bastion on the black basalt rock cliff of Loo Rock near Funchal. ", "end": "Mon 08 June 1857", "id": "196243", "images": {"title": "I Trieste to Madeira", "url": "https://thanados.openatlas.eu/api/display/196387"}, "place_from": "196112", "place_to": "196115", "title": "The Novara sails from the Strait of Gibraltar to Madeira"}, {"begin": "Wed 17 June 1857", "description": "After a 49-day passage across the Atlantic Ocean and a Line-crossing ceremony on 14 July, the Novara reached Rio de Janeiro on 5 August 1857, which was said to have been home to 200,000 inhabitants at the time, including 80,000 slaves. ", "end": "Wed 05 August 1857", "id": "196244", "images": {"title": "II Madeira to Rio de Janeiro", "url": "https://thanados.openatlas.eu/api/display/196388"}, "place_from": "196115", "place_to": "196117", "title": "The Novara sails from Madeira to Rio de Janeiro"}, {"begin": "Mon 31 August 1857", "description": "On the morning of 31 August, the anchor was weighed off Rio de Janeiro and on 5 September, the Novara had already covered 1000 nautical miles. On 12 September 1857, the Novara sailed 300 nautical miles north of the island of Tristan da Cunha, about halfway between South America and Africa. ", "end": "Sat 12 September 1857", "id": "196286", "images": {"title": "III Rio de Janeiro to Cape Town", "url": "https://thanados.openatlas.eu/api/display/196389"}, "place_from": "196117", "place_to": "196284", "title": "The Novara sails from Rio de Janeiro to Cape Town 1/2"}, {"begin": "Sat 12 September 1857", "description": "As Table Bay in front of Cape Town is exposed to strong north and north-west winds at that time of year and was no safe harbour, it was decided to anchor in False Bay in front of Simon\u0027s Town, the naval port east of the Cape of Good Hope. ", "end": "Fri 02 October 1857", "id": "196287", "images": {"title": "III Rio de Janeiro to Cape Town", "url": "https://thanados.openatlas.eu/api/display/196389"}, "place_from": "196284", "place_to": "196133", "title": "The Novara sails from Rio de Janeiro to Cape Town 2/2"}, {"begin": "Mon 26 October 1857", "description": "After a number of men had to be left behind in hospitals in Rio de Janeiro and Cape Town due to incurable diseases (mostly lung diseases), the Novara was able to replenish its crew in Cape Town. The five new African sailors and ship\u0027s boys were prisoners of war who, according to Hochstetter, had agreed to serve on the Novara. On 1 November, the Novara reaches the Indian Ocean, and after rescuing the monkey \"Beri\", who had gone overboard, and at times very high swell, the ship finally anchors in the bay east of Saint Paul Island after 24 days and 3000 nautical miles. ", "end": "Thu 19 November 1857", "id": "196288", "images": {"title": "IV Cape Town to St. Paul Island", "url": "https://thanados.openatlas.eu/api/display/196390"}, "place_from": "196133", "place_to": "196141", "title": "The Novara sails from Cape Town to Saint Paul Island"}, {"begin": "Sun 06 December 1857", "description": "The Novara exploration team spent 17 days on the stormy island of Saint Paul, of which only 6 were sunny days. During their stay, they stayed in the straw thatched huts of three fishermen who live there seasonally but came originally from France and the island of Bourbon (R\u00e9union). After intensive studies of the flora, fauna (mainly penguins and isopods) and the geology, the Novara finally set off for the nearby and also volcanic island of Amsterdam. There, the Novara encountered a whaling ship, to which it provided medical assistance due to an injured crew member. An attempt was then made to find a favourable landing site and two short landings took place. In the process, a sailor must have accidentally started a fire and large parts of the island went up in flames, which has reportedly already happened once before in 1792. The crew marvelled at the fire during the night and eventually the Novara left the island heading north the next day. ", "end": "Mon 07 December 1857", "id": "196289", "images": {"title": "V St. Paul Island to Ceylon", "url": "https://thanados.openatlas.eu/api/display/196391"}, "place_from": "196141", "place_to": "196145", "title": "The Novara sails from Saint Paul Island to Amsterdam Island"}, {"begin": "Wed 09 December 1857", "description": "From 16 to 17 December 1857, the Novara crossed the Tropic of Capricorn and exactly at the turn of the year 1857/1858, at 82 degrees and 36 minutes east of Greenwich, it crossed the equator for the second time. On the evening of 7 January, Sri Lanka (Ceylon) finally comes into sight and a Sinhalese pilot comes on board, who had approached the Novara on a small catamaran together with three oarsmen. He navigated the ship past the coral reefs and finally the anchor dropped about a nautical mile off Point de Galle. ", "end": "Thu 07 January 1858", "id": "196290", "images": {"title": "V St. Paul Island to Ceylon", "url": "https://thanados.openatlas.eu/api/display/196391"}, "place_from": "196145", "place_to": "196157", "title": "The Novara sails from Amsterdam Island to Sri Lanka (Galle)"}, {"begin": "Sat 16 January 1858", "description": "The journey of the Novara from Sri Lanka (Ceylon) to Madras (Chennai) went in general rather smoothly, with the exception of an incident on 22 January 1858, when a fire broke out due to the high-proof alcohol stored on board for research purposes, which could finally be extinguished by means of hammocks soaked in seawater. It subsequently turned out that the vapours escaping from rusty vessels had caught fire when a sailor entered the room with a lantern. On the evening of 30 January, the Novara anchored about three nautical miles off the coast of Madras. ", "end": "Mon 01 February 1858", "id": "196291", "images": {"title": "VI Ceylon to Madras", "url": "https://thanados.openatlas.eu/api/display/196392"}, "place_from": "196157", "place_to": "196175", "title": "The Novara sails from Sri Lanka (Ceylon) to Chennai (Madras)"}, {"begin": "Wed 10 February 1858", "description": "After a pleasant fortnight\u0027s crossing in consistently fine weather, the Imperial and Royal Frigate Novara reached Car Nicobar, the northernmost island of the Nicobar archipelago, and anchored in its northwestern bay. After a boat had approached the Novara but could not be immediately taken into account by the crew, this was initially interpreted by the local population as a sign of hostility, according to Hochstetter. Women and children hid inside the island and the men armed themselves. When some crew members of the Novara finally went ashore unarmed and assured them of their good intentions, the situation relaxed and people approached each other amicably. But the locals remained suspicious towards the strangers and repeatedly inquired about the timing of the Novara\u0027s onward journey. ", "end": "Tue 23 February 1858", "id": "196292", "images": {"title": "VII Madras to Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196393"}, "place_from": "196175", "place_to": "196178", "title": "The Novara sails from Madras (Chennai) to Car Nicobar"}, {"begin": "Mon 01 March 1858", "description": "After the local population from Car Nicobar except for the armed men also fled from the Novara on the east and south coasts, the ship set off further south. On 2 March, it reached Battimalv Island, which it could not approach due to the current and wind conditions, and sailed on to Chowra Island, which it reached the following day. ", "end": "Wed 03 March 1858", "id": "196293", "images": {"title": "Battimalv Island 1858", "url": "https://thanados.openatlas.eu/api/display/196689"}, "place_from": "196178", "place_to": "196180", "title": "The Novara sails from Car Nicobar past Battimalv Island to Chowra Island"}, {"begin": "Wed 03 March 1858", "description": "The Novara initially anchored on the west side of the uninhabited island of Tillangchong and launched a boat the following day to explore and document the east side of the island while the Novara explored the west side. At the southern tip, the boat was picked up again and the Novara spent the night in a well-protected anchorage in the southeast of the island. The next day, the anchor was lifted and the frigate left Tillangchong. ", "end": "Thu 04 March 1858", "id": "196294", "images": {"title": "Islands Teressa and Chowra 1858", "url": "https://thanados.openatlas.eu/api/display/196702"}, "place_from": "196180", "place_to": "196184", "title": "The Novara sails from Chowra Island to Tillangchong Island"}, {"begin": "Sat 06 March 1858", "description": "On the same day after leaving Tillangchong, the Novara reached its anchorage in the so-called West Harbour between Camorta Island to the north and Nancowry Island to the south, opposite the village of ltoe on Nancowry. ", "end": "Sat 06 March 1858", "id": "196295", "images": {"title": "Tillangchong Island 1858a", "url": "https://thanados.openatlas.eu/api/display/196694"}, "place_from": "196184", "place_to": "196188", "title": "The Novara sails from Tillangchong Island to Nancowry Island"}, {"begin": "Fri 12 March 1858", "description": "The Novara left Nancowry heading west and sailed first along the island of Camorta to the northwest, but could not overcome the wind and current and eventually continued south. After altogether five days, the ship reached the islands of Treis and Track where the anchor had to be dropped and the two small forested islands could be visited. The landing was only possible with the help of some locals who happened to be near the otherwise uninhabited islands. Treis turned out to be an island inhabited by countless pigeon species, and the first specimen of a Nicobar pigeon was shot for the zoologists during their visit. ", "end": "Wed 17 March 1858", "id": "196296", "images": {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}, "place_from": "196188", "place_to": "196193", "title": "The Novara sails from Nancowry Island to the islands of Treis and Track"}, {"begin": "Wed 17 March 1858", "description": "As the tide rose, the current changed in favour of the Novara, and shortly after sunset it reached its anchorage in a large bay to the northwest of Little Nicobar, which also contained the small island of Pulomilo (Milu). On 18 March in the morning, the crew noticed a noticeable number of canoes along the coast of Little Nicobar, which they again identified as the fleeing population, as only a few local men were encountered during the following landing. The naturalists, however, due to lack of time, preferred to investigate only the small secluded and easier accessible island of Pulomilo instead of the primeval forests and swamps of Little Nicobar. ", "end": "Wed 17 March 1858", "id": "196297", "images": {"title": "Pulomilo Island 1858", "url": "https://thanados.openatlas.eu/api/display/196706"}, "place_from": "196193", "place_to": "196197", "title": "The Novara sails from the islands of Treis and Track to Little Nicobar Island"}, {"begin": "Fri 19 March 1858", "description": "In the evening, the anchor was raised and the Novara sailed along the east coast of Little Nicobar into the St. George\u0027s Channel on the north side of Great Nicobar, where it anchored southeast of Kondul Island, which was visited the next day. On the east side of the island the crew found numerous huts, which were again deserted except for a few men. Some crew members made it their mission to walk around the entire island. In the early morning, they set off from the east side towards the north and met up with their comrades on the south side in the evening, completely exhausted and tired. ", "end": "Fri 19 March 1858", "id": "196298", "images": {"title": "St. Georgs Kanal 1858", "url": "https://thanados.openatlas.eu/api/display/196709"}, "place_from": "196197", "place_to": "196199", "title": "The Novara sails from Little Nicobar to Kondul Island (Great Nicobar)"}, {"begin": "Tue 23 March 1858", "description": "In the morning, the Novara set sails and headed south along the west coast of Great Nicobar to document the still unknown coastline. The venture failed, however, due to the high surf, which overturned the dispatched boat and the crew had to swim ashore and be painstakingly picked up during the night. In the evening of the following day, the Novara anchored in Galathea Bay at the southern tip of Great Nicobar, into which the Galathea River flows. The next day, a holiday, the crew spent on board the ship, and the following day the last landing on the Nicobar Islands took place before leaving in the evening for the Strait of Malacca. ", "end": "Wed 24 March 1858", "id": "196299", "images": {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}, "place_from": "196199", "place_to": "196205", "title": "The Novara sails from Kondul Island (Great Nicobar) to Galathea Bay (Great Nicobar)"}, {"begin": "Fri 26 March 1858", "description": "After setting off from the Nicobar Islands towards the Strait of Malacca, the weather conditions were initially very bad for sailing and the Novara could only make slow progress. However, this changed on 9 April 1858 and the voyage finally picked up speed. ", "end": "Fri 09 April 1858", "id": "196300", "images": {"title": "IX Nicobar Islands to Singapore", "url": "https://thanados.openatlas.eu/api/display/196395"}, "place_from": "196205", "place_to": "196208", "title": "The Novara sails from Galathea Bay (Great Nicobar) to the Strait of Malacca"}, {"begin": "Fri 09 April 1858", "description": "On 14 April 1858, the Novara sailed past the city of Malacca and reached Singapore already the following day, where the ship finally dropped anchor. ", "end": "Thu 15 April 1858", "id": "196301", "images": {"title": "IX Nicobar Islands to Singapore", "url": "https://thanados.openatlas.eu/api/display/196395"}, "place_from": "196208", "place_to": "196210", "title": "The Novara sails from the Strait of Malacca to Singapore"}, {"begin": "Thu 22 April 1858", "description": "After the Novara had been supplied with provisions for another six months by the Chinese businessman Whampoa (Hoo Ah Kay), the ship set off for Jakarta. On 25 April 1858, the equator was crossed for the third time... ", "end": "Fri 30 April 1858", "id": "196302", "images": {"title": "X Singapore to Batavia", "url": "https://thanados.openatlas.eu/api/display/196396"}, "place_from": "196210", "place_to": "196212", "title": "The Novara sails from Singapore to the Gaspar Strait"}, {"begin": "Fri 30 April 1858", "description": "", "end": "Wed 05 May 1858", "id": "196303", "images": {"title": "X Singapore to Batavia", "url": "https://thanados.openatlas.eu/api/display/196396"}, "place_from": "196212", "place_to": "196214", "title": "The Novara sails from the Gaspar Strait to Jakarta (Batavia)"}, {"begin": "Sat 29 May 1858", "description": "", "end": "Tue 15 June 1858", "id": "196304", "images": {"title": "XI Batavia to Manila", "url": "https://thanados.openatlas.eu/api/display/196397"}, "place_from": "196214", "place_to": "196217", "title": "The Novara sails from Jakarta (Batavia) to Manila"}, {"begin": "Sat 26 June 1858", "description": "", "end": "Mon 05 July 1858", "id": "196305", "images": {"title": "XII Manila to Hong Kong", "url": "https://thanados.openatlas.eu/api/display/196398"}, "place_from": "196217", "place_to": "196222", "title": "The Novara sails from Manila to Hong Kong"}, {"begin": "Sun 18 July 1858", "description": "", "end": "Tue 27 July 1858", "id": "196306", "images": {"title": "XIII Hong Kong to Shanghai", "url": "https://thanados.openatlas.eu/api/display/196399"}, "place_from": "196222", "place_to": "196224", "title": "The Novara sails from Hong Kong to Shanghai"}, {"begin": "Wed 11 August 1858", "description": "", "end": "Thu 16 September 1858", "id": "196307", "images": {"title": "XIV Shanghai to Micronesia", "url": "https://thanados.openatlas.eu/api/display/196402"}, "place_from": "196224", "place_to": "196227", "title": "The Novara sails from Shanghai to Pohnpei Island (Micronesia)"}, {"begin": "Sat 18 September 1858", "description": "", "end": "Sun 17 October 1858", "id": "196308", "images": {"title": "XV Micronesia to Sydney", "url": "https://thanados.openatlas.eu/api/display/196403"}, "place_from": "196227", "place_to": "196230", "title": "The Novara sails from Pohnpei Island (Micronesia) to the Stewart Islands (Solomon Islands)"}, {"begin": "Sun 17 October 1858", "description": "", "end": "Fri 05 November 1858", "id": "196311", "images": {"title": "XV Micronesia to Sydney", "url": "https://thanados.openatlas.eu/api/display/196403"}, "place_from": "196230", "place_to": "196232", "title": "The Novara sails from the Stewart Islands (Solomon Islands) to Sydney"}, {"begin": "Tue 07 December 1858", "description": "", "end": "Wed 22 December 1858", "id": "196314", "images": {"title": "XVI Sydney to Auckland", "url": "https://thanados.openatlas.eu/api/display/196404"}, "place_from": "196232", "place_to": "196234", "title": "The Novara sails from Sydney to Auckland"}, {"begin": "Sat 08 January 1859", "description": "", "end": "Fri 11 February 1859", "id": "196411", "images": {"title": "XVII Auckland to Tahiti", "url": "https://thanados.openatlas.eu/api/display/196405"}, "place_from": "196234", "place_to": "196409", "title": "The Novara sails from Auckland to Tahiti"}, {"begin": "Mon 28 February 1859", "description": "", "end": "Sun 17 April 1859", "id": "196415", "images": {"title": "XVIII Tahiti to Valpara\u00edso", "url": "https://thanados.openatlas.eu/api/display/196406"}, "place_from": "196409", "place_to": "196412", "title": "The Novara sails from Tahiti to Valpara\u00edso"}, {"begin": "Wed 11 May 1859", "description": "", "end": "Mon 01 August 1859", "id": "196416", "images": {"title": "XIX Valpara\u00edso to Gibraltar", "url": "https://thanados.openatlas.eu/api/display/196407"}, "place_from": "196412", "place_to": "196098", "title": "The Novara sails from Valpara\u00edso to Gibraltar"}, {"begin": "Sun 07 August 1859", "description": "", "end": "Fri 26 August 1859", "id": "196417", "images": {"title": "XX Gibraltar to Trieste", "url": "https://thanados.openatlas.eu/api/display/196408"}, "place_from": "196098", "place_to": "196065", "title": "The Novara sails from Gibraltar to Trieste"}]</script>
+    <script>places = [{
+        "description": "",
+        "geometry": {
+            "coordinates": [77.600894797, -37.855599075],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196145",
+        "images": [{
+            "title": "Amsterdam Island 1857",
+            "url": "https://thanados.openatlas.eu/api/display/196426"
+        }, {"title": "V St. Paul Island to Ceylon", "url": "https://thanados.openatlas.eu/api/display/196391"}],
+        "reference": ["https://www.geonames.org/1547220", "https://www.wikidata.org/entity/Q194215"],
+        "title": "Amsterdam Island",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [150.78644, -34.20347],
+            "description": "Appin (2177806), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Appin",
+            "type": "Point"
+        },
+        "id": "196764",
+        "images": [{"title": "Appin (Australia) 1858", "url": "https://thanados.openatlas.eu/api/display/196763"}],
+        "reference": ["https://www.geonames.org/2177806", "https://www.wikidata.org/entity/Q770484"],
+        "title": "Appin",
+        "types": ["Town"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [92.85833, 8.8274],
+            "description": "Batti Malv Island (1276692), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Batti Malv Island",
+            "type": "Point"
+        },
+        "id": "198037",
+        "images": [{"title": "Battimalv Island 1858", "url": "https://thanados.openatlas.eu/api/display/196689"}],
+        "reference": ["Battimalv Island", "Insel Battimalv", "https://www.wikidata.org/entity/Q26791686"],
+        "title": "Battimalv Island",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [-5.43333, 36.15],
+            "description": "Bay of Gibraltar (2411584), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Bay of Gibraltar",
+            "type": "Point"
+        },
+        "id": "196098",
+        "images": [{
+            "title": "Gibraltar 1857/1",
+            "url": "https://thanados.openatlas.eu/api/display/196379"
+        }, {
+            "title": "Gibraltar 1857/2",
+            "url": "https://thanados.openatlas.eu/api/display/196380"
+        }, {
+            "title": "I Trieste to Madeira",
+            "url": "https://thanados.openatlas.eu/api/display/196387"
+        }, {
+            "title": "South Gate of Gibraltar 1857",
+            "url": "https://thanados.openatlas.eu/api/display/196381"
+        }, {
+            "title": "XIX Valpara\u00edso to Gibraltar",
+            "url": "https://thanados.openatlas.eu/api/display/196407"
+        }, {"title": "XX Gibraltar to Trieste", "url": "https://thanados.openatlas.eu/api/display/196408"}],
+        "reference": ["https://www.geonames.org/2411584", "https://www.wikidata.org/entity/Q2142350"],
+        "title": "Bay of Gibraltar",
+        "types": ["Bay"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [93.5, 8.13333],
+            "description": "Camorta Island (1274998), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Camorta Island",
+            "type": "Point"
+        },
+        "id": "196697",
+        "images": [{"title": "Camorta Island 1858", "url": "https://thanados.openatlas.eu/api/display/196700"}],
+        "reference": ["https://www.geonames.org/1274998", "https://www.wikidata.org/entity/Q26791426"],
+        "title": "Camorta Island",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [92.755075798, 9.227372137],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196178",
+        "images": [{
+            "title": "Sawi Bay 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196429"
+        }, {
+            "title": "Sawi Village 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196430"
+        }, {
+            "title": "VIII Nicobar Islands",
+            "url": "https://thanados.openatlas.eu/api/display/196394"
+        }, {"title": "VII Madras to Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196393"}],
+        "reference": ["https://www.geonames.org/1274969", "https://www.wikidata.org/entity/Q1035273"],
+        "title": "Car Nicobar",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "geometries": [{
+                "coordinates": [93.04768, 8.45386],
+                "description": "Chowra Island (1273958), imported from GeoNames",
+                "shapeType": "centerpoint",
+                "title": "Chowra Island",
+                "type": "Point"
+            }, {
+                "coordinates": [93.04768, 8.45386],
+                "description": "Chowra Island (1273958), imported from GeoNames",
+                "shapeType": "centerpoint",
+                "title": "Chowra Island",
+                "type": "Point"
+            }], "type": "GeometryCollection"
+        },
+        "id": "196180",
+        "images": [{
+            "title": "Islands Teressa and Chowra 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196702"
+        }, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}],
+        "reference": ["Chowra Island", "https://www.geonames.org/1273958", "Insel Chowra", "https://www.wikidata.org/entity/Q1076829"],
+        "title": "Chowra Island",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [93.86667, 6.8],
+            "description": "South Bay (1255688), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "South Bay",
+            "type": "Point"
+        },
+        "id": "196205",
+        "images": [{
+            "title": "IX Nicobar Islands to Singapore",
+            "url": "https://thanados.openatlas.eu/api/display/196395"
+        }, {
+            "title": "Nicobar Islands 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196705"
+        }, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}],
+        "reference": ["https://www.geonames.org/1255688", "https://www.wikidata.org/entity/Q2979723"],
+        "title": "Galathea Bay (Great Nicobar)",
+        "types": ["Bay"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [107.278740957, -2.868978564],
+            "description": "Gaspar Strait (1644273), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Gaspar Strait",
+            "type": "Point"
+        },
+        "id": "196212",
+        "images": [{"title": "X Singapore to Batavia", "url": "https://thanados.openatlas.eu/api/display/196396"}],
+        "reference": ["https://www.geonames.org/1644273", "https://www.wikidata.org/entity/Q2078615"],
+        "title": "Gaspar Strait",
+        "types": ["Strait"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [113.25, 23.11667],
+            "description": "Guangzhou (1809858), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Guangzhou",
+            "type": "Point"
+        },
+        "id": "198040",
+        "images": "",
+        "reference": ["Guangzhou", "https://www.geonames.org/1809858", "https://www.wikidata.org/entity/Q16572"],
+        "title": "Guangzhou",
+        "types": ["Metropolis"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [93.721101454, 7.1984419],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196199",
+        "images": [{
+            "title": "IX Nicobar Islands to Singapore",
+            "url": "https://thanados.openatlas.eu/api/display/196395"
+        }, {
+            "title": "Nicobar Islands 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196705"
+        }, {
+            "title": "St. Georgs Kanal 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196709"
+        }, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}],
+        "reference": ["https://www.geonames.org/1266197", "https://www.wikidata.org/entity/Q24040535"],
+        "title": "Kondul Island (Great Nicobar)",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [93.702778252, 7.397165448],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196197",
+        "images": [{
+            "title": "Nicobar Islands 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196705"
+        }, {
+            "title": "Pulomilo Island 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196706"
+        }, {
+            "title": "St. Georgs Kanal 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196709"
+        }, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}],
+        "reference": ["https://www.geonames.org/1264874", "https://www.wikidata.org/entity/Q730896"],
+        "title": "Little Nicobar Island",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [93.524247154, 8.014516793],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196188",
+        "images": [{
+            "title": "Camorta Island 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196700"
+        }, {
+            "title": "Nancowry Island 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196696"
+        }, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}],
+        "reference": ["https://www.geonames.org/1261993", "https://www.wikidata.org/entity/Q1964467"],
+        "title": "Nancowry Island",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [158.159757922, 6.809052749],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196227",
+        "images": [{
+            "title": "Pohnpei Island 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196759"
+        }, {
+            "title": "XIV Shanghai to Micronesia",
+            "url": "https://thanados.openatlas.eu/api/display/196402"
+        }, {"title": "XV Micronesia to Sydney", "url": "https://thanados.openatlas.eu/api/display/196403"}],
+        "reference": ["https://www.geonames.org/2081551", "https://www.wikidata.org/entity/Q319836"],
+        "title": "Pohnpei Island",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [174.768876416, -36.836482658],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196234",
+        "images": [{
+            "title": "Auckland 1958/1859",
+            "url": "https://thanados.openatlas.eu/api/display/196766"
+        }, {
+            "title": "XVII Auckland to Tahiti",
+            "url": "https://thanados.openatlas.eu/api/display/196405"
+        }, {"title": "XVI Sydney to Auckland", "url": "https://thanados.openatlas.eu/api/display/196404"}],
+        "reference": ["https://www.geonames.org/10069270", "https://www.wikidata.org/entity/Q37100"],
+        "title": "Port of Auckland",
+        "types": ["Port"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [120.91333949, 14.487488389],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196217",
+        "images": [{
+            "title": "Manila 1858a",
+            "url": "https://thanados.openatlas.eu/api/display/196718"
+        }, {
+            "title": "Manila 1858b",
+            "url": "https://thanados.openatlas.eu/api/display/196719"
+        }, {
+            "title": "XI Batavia to Manila",
+            "url": "https://thanados.openatlas.eu/api/display/196397"
+        }, {"title": "XII Manila to Hong Kong", "url": "https://thanados.openatlas.eu/api/display/196398"}],
+        "reference": ["https://www.geonames.org/1717641", "https://www.wikidata.org/entity/Q1482"],
+        "title": "Port of Cavite (Manila)",
+        "types": ["Port"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [80.29782662, 13.07623599],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196175",
+        "images": [{
+            "title": "Temple 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196428"
+        }, {
+            "title": "VI Ceylon to Madras",
+            "url": "https://thanados.openatlas.eu/api/display/196392"
+        }, {"title": "VII Madras to Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196393"}],
+        "reference": ["https://www.geonames.org/11101740", "https://www.wikidata.org/entity/Q1352"],
+        "title": "Port of Chennai",
+        "types": ["Port"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [-16.915248126, 32.6405667],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196115",
+        "images": [{
+            "title": "Funchal (Madeira) 1857",
+            "url": "https://thanados.openatlas.eu/api/display/196418"
+        }, {"title": "Loo Rock (Madeira) 1857", "url": "https://thanados.openatlas.eu/api/display/197721"}],
+        "reference": ["https://www.geonames.org/2267827", "https://www.wikidata.org/entity/Q10351973"],
+        "title": "Port of Funchal (Madeira)",
+        "types": ["Port"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [80.218605537, 6.030468654],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196157",
+        "images": [{
+            "title": "Point de Galle 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196427"
+        }, {
+            "title": "VI Ceylon to Madras",
+            "url": "https://thanados.openatlas.eu/api/display/196392"
+        }, {"title": "V St. Paul Island to Ceylon", "url": "https://thanados.openatlas.eu/api/display/196391"}],
+        "reference": ["https://www.geonames.org/1246294", "https://www.wikidata.org/entity/Q319366"],
+        "title": "Port of Galle (Sri Lanka)",
+        "types": ["Port"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [114.170264383, 22.289383066],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196222",
+        "images": [{
+            "title": "Hong Kong 1858a",
+            "url": "https://thanados.openatlas.eu/api/display/196720"
+        }, {
+            "title": "Hong Kong 1858b",
+            "url": "https://thanados.openatlas.eu/api/display/196721"
+        }, {
+            "title": "XIII Hong Kong to Shanghai",
+            "url": "https://thanados.openatlas.eu/api/display/196399"
+        }, {"title": "XII Manila to Hong Kong", "url": "https://thanados.openatlas.eu/api/display/196398"}],
+        "reference": ["https://www.geonames.org/11791597", "https://www.wikidata.org/entity/Q8646"],
+        "title": "Port of Hong Kong",
+        "types": ["Port"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [106.773696624, -6.086244903],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196214",
+        "images": [{
+            "title": "Jakarta 1858a",
+            "url": "https://thanados.openatlas.eu/api/display/196716"
+        }, {
+            "title": "Jakarta 1858b",
+            "url": "https://thanados.openatlas.eu/api/display/196717"
+        }, {
+            "title": "XI Batavia to Manila",
+            "url": "https://thanados.openatlas.eu/api/display/196397"
+        }, {"title": "X Singapore to Batavia", "url": "https://thanados.openatlas.eu/api/display/196396"}],
+        "reference": ["https://www.geonames.org/11549302", "https://www.wikidata.org/entity/Q3630"],
+        "title": "Port of Jakarta",
+        "types": ["Port"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [-149.587611857, -17.541985262],
+            "description": "Tahiti (4033649), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Tahiti",
+            "type": "Point"
+        },
+        "id": "196409",
+        "images": [{
+            "title": "Lake Vaihiria 1859",
+            "url": "https://thanados.openatlas.eu/api/display/196871"
+        }, {
+            "title": "Port of Papeete 1859",
+            "url": "https://thanados.openatlas.eu/api/display/196769"
+        }, {
+            "title": "Tahiti 1859",
+            "url": "https://thanados.openatlas.eu/api/display/196873"
+        }, {
+            "title": "Tahiti landscape 1859",
+            "url": "https://thanados.openatlas.eu/api/display/196870"
+        }, {
+            "title": "Tahiti landscape 1859b",
+            "url": "https://thanados.openatlas.eu/api/display/196872"
+        }, {"title": "Tahiti um 1859", "url": "https://thanados.openatlas.eu/api/display/196869"}],
+        "reference": ["https://www.geonames.org/4033649", "https://www.wikidata.org/entity/Q42000"],
+        "title": "Port of Papeete (Tahiti)",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [-43.16734418, -22.9015346],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196117",
+        "images": [{"title": "Rio de Janeiro 1857", "url": "https://thanados.openatlas.eu/api/display/196419"}],
+        "reference": ["https://www.geonames.org/3451190", "https://www.wikidata.org/entity/Q525922"],
+        "title": "Port of Rio de Janeiro",
+        "types": ["Port"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [121.339855849, 31.535992082],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196224",
+        "images": [{
+            "title": "Shanghai 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196738"
+        }, {
+            "title": "XIII Hong Kong to Shanghai",
+            "url": "https://thanados.openatlas.eu/api/display/196399"
+        }, {"title": "XIV Shanghai to Micronesia", "url": "https://thanados.openatlas.eu/api/display/196402"}],
+        "reference": ["https://www.geonames.org/1796236", "https://www.wikidata.org/entity/Q8686"],
+        "title": "Port of Shanghai",
+        "types": ["Port"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [18.431323743, -34.188915824],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196133",
+        "images": [{
+            "title": "Cape of Storms 1857",
+            "url": "https://thanados.openatlas.eu/api/display/196420"
+        }, {"title": "Cape Town 1857", "url": "https://thanados.openatlas.eu/api/display/196421"}],
+        "reference": ["https://www.geonames.org/3361618", "https://www.wikidata.org/entity/Q1013370"],
+        "title": "Port of Simon\u0027s Town (Cape Town)",
+        "types": ["Port"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [103.856850918, 1.254725585],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196210",
+        "images": [{
+            "title": "IX Nicobar Islands to Singapore",
+            "url": "https://thanados.openatlas.eu/api/display/196395"
+        }, {
+            "title": "Singapore 1858a",
+            "url": "https://thanados.openatlas.eu/api/display/196714"
+        }, {
+            "title": "Singapore 1858b",
+            "url": "https://thanados.openatlas.eu/api/display/196715"
+        }, {"title": "X Singapore to Batavia", "url": "https://thanados.openatlas.eu/api/display/196396"}],
+        "reference": ["https://www.geonames.org/1885154", "https://www.wikidata.org/entity/Q1421994"],
+        "title": "Port of Singapore",
+        "types": ["Port"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [151.213159242, -33.854832376],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196232",
+        "images": [{
+            "title": "Appin (Australia) 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196763"
+        }, {
+            "title": "Sydney 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196762"
+        }, {
+            "title": "XVI Sydney to Auckland",
+            "url": "https://thanados.openatlas.eu/api/display/196404"
+        }, {"title": "XV Micronesia to Sydney", "url": "https://thanados.openatlas.eu/api/display/196403"}],
+        "reference": ["https://www.geonames.org/2147714", "https://www.wikidata.org/entity/Q3130"],
+        "title": "Port of Sydney",
+        "types": ["Port"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [13.770929465, 45.631426845],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196065",
+        "images": [{"title": "Trieste 1859", "url": "https://thanados.openatlas.eu/api/display/196883"}],
+        "reference": ["https://www.geonames.org/9796929", "https://www.wikidata.org/entity/Q1567848"],
+        "title": "Port of Trieste",
+        "types": ["Port"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [-71.623641538, -33.034351075],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196412",
+        "images": [{
+            "title": "Valpara\u00edso 1859a",
+            "url": "https://thanados.openatlas.eu/api/display/196877"
+        }, {"title": "Valpara\u00edso 1859b", "url": "https://thanados.openatlas.eu/api/display/196878"}],
+        "reference": ["https://www.geonames.org/3868626", "https://www.wikidata.org/entity/Q33986"],
+        "title": "Port of Valpara\u00edso",
+        "types": ["Town"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [-12.398736314, -34.082237152],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196284",
+        "images": "",
+        "reference": "",
+        "title": "Position of Novara 300 nautical miles north of Tristan da Cunha",
+        "types": ["Position"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [13.84806, 44.86833],
+            "description": "Pula (3192224), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Pula",
+            "type": "Point"
+        },
+        "id": "196887",
+        "images": [{
+            "title": "Pula 1859a",
+            "url": "https://thanados.openatlas.eu/api/display/196890"
+        }, {"title": "Pula 1859b", "url": "https://thanados.openatlas.eu/api/display/196891"}],
+        "reference": ["https://www.geonames.org/3192224", "https://www.wikidata.org/entity/Q4656"],
+        "title": "Pula",
+        "types": ["Town"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [93.68711, 7.40332],
+            "description": "Pulomilo Island (1263045), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Pulomilo Island",
+            "type": "Point"
+        },
+        "id": "196707",
+        "images": [{
+            "title": "Nicobar Islands 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196705"
+        }, {
+            "title": "Pulomilo Island 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196706"
+        }, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}],
+        "reference": ["https://www.geonames.org/1263045"],
+        "title": "Pulomilo Island",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [14.72443, 36.92574],
+            "description": "Ragusa (2523650), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Ragusa",
+            "type": "Point"
+        },
+        "id": "196884",
+        "images": [{"title": "Ragusa 1859", "url": "https://thanados.openatlas.eu/api/display/196886"}],
+        "reference": ["https://www.geonames.org/2523650", "https://www.wikidata.org/entity/Q13674"],
+        "title": "Ragusa",
+        "types": ["Town"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [77.528413954, -38.720573543],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196141",
+        "images": [{
+            "title": "Saint Paul Island 1857",
+            "url": "https://thanados.openatlas.eu/api/display/196422"
+        }, {
+            "title": "Saint Paul Island Barre 1857",
+            "url": "https://thanados.openatlas.eu/api/display/196424"
+        }, {
+            "title": "Saint Paul Island Cabin 1857",
+            "url": "https://thanados.openatlas.eu/api/display/196425"
+        }, {"title": "Saint Paul Island Karte 1857", "url": "https://thanados.openatlas.eu/api/display/196423"}],
+        "reference": ["https://www.geonames.org/1545990", "https://www.wikidata.org/entity/Q204821"],
+        "title": "Saint Paul Island",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [-70.64827, -33.45694],
+            "description": "Santiago (3871336), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Santiago",
+            "type": "Point"
+        },
+        "id": "196874",
+        "images": [{
+            "title": "On the way to Santiago de Chile 1859",
+            "url": "https://thanados.openatlas.eu/api/display/196880"
+        }, {"title": "Santiago de Chile 1859", "url": "https://thanados.openatlas.eu/api/display/196879"}],
+        "reference": ["https://www.geonames.org/3871336", "https://www.wikidata.org/entity/Q2887"],
+        "title": "Santiago de Chile",
+        "types": ["Metropolis"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [18.778047386, 40.095743887],
+            "description": "",
+            "shapeType": "centerpoint",
+            "title": "",
+            "type": "Point"
+        },
+        "id": "196079",
+        "images": "",
+        "reference": ["https://www.geonames.org/3171784", "https://www.wikidata.org/entity/Q367993"],
+        "title": "Southern Adriatic Sea near Capo d\u0027Otranto",
+        "types": ["Waterbody"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [162.87051, -8.39672],
+            "description": "Stewart Islands (2103300), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Stewart Islands",
+            "type": "Point"
+        },
+        "id": "196230",
+        "images": [{"title": "Sikaiana 1858", "url": "https://thanados.openatlas.eu/api/display/196761"}],
+        "reference": ["https://www.geonames.org/2103300", "https://www.wikidata.org/entity/Q49296718"],
+        "title": "Stewart Islands (Solomon Islands)",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [-5.6, 35.95],
+            "description": "Strait of Gibraltar (2363256), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Strait of Gibraltar",
+            "type": "Point"
+        },
+        "id": "196112",
+        "images": [{
+            "title": "I Trieste to Madeira",
+            "url": "https://thanados.openatlas.eu/api/display/196387"
+        }, {
+            "title": "Novara in Strait of Gibraltar 1859",
+            "url": "https://thanados.openatlas.eu/api/display/196881"
+        }, {
+            "title": "XIX Valpara\u00edso to Gibraltar",
+            "url": "https://thanados.openatlas.eu/api/display/196407"
+        }, {"title": "XX Gibraltar to Trieste", "url": "https://thanados.openatlas.eu/api/display/196408"}],
+        "reference": ["https://www.geonames.org/2363256", "https://www.wikidata.org/entity/Q36124"],
+        "title": "Strait of Gibraltar",
+        "types": ["Strait"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [98.432063456, 6.844623672],
+            "description": "Strait of Malacca (1818192), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Strait of Malacca",
+            "type": "Point"
+        },
+        "id": "196208",
+        "images": [{
+            "title": "IX Nicobar Islands to Singapore",
+            "url": "https://thanados.openatlas.eu/api/display/196395"
+        }],
+        "reference": ["Strait of Malacca", "https://www.geonames.org/1818192", "Stra\u00dfe von Malakka", "https://www.wikidata.org/entity/Q48359"],
+        "title": "Strait of Malacca",
+        "types": ["Strait"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [15.6411, 38.24681],
+            "description": "Strait of Messina (2524168), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Strait of Messina",
+            "type": "Point"
+        },
+        "id": "196093",
+        "images": "",
+        "reference": ["https://www.geonames.org/2524168", "https://www.wikidata.org/entity/Q134705"],
+        "title": "Strait of Messina",
+        "types": ["Strait"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [93.11565, 8.2594],
+            "description": "Teressa Island (1254894), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Teressa Island",
+            "type": "Point"
+        },
+        "id": "196703",
+        "images": [{
+            "title": "Islands Teressa and Chowra 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196702"
+        }],
+        "reference": ["https://www.geonames.org/1254894", "https://www.wikidata.org/entity/Q2307156"],
+        "title": "Teressa Island",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [93.61667, 8.5],
+            "description": "Tillanch\u0101ng Dw\u012bp (1254477), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Tillanch\u0101ng Dw\u012bp",
+            "type": "Point"
+        },
+        "id": "196184",
+        "images": [{
+            "title": "Tillangchong Island 1858a",
+            "url": "https://thanados.openatlas.eu/api/display/196694"
+        }, {
+            "title": "Tillangchong Island 1858b",
+            "url": "https://thanados.openatlas.eu/api/display/196695"
+        }, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}],
+        "reference": ["https://www.geonames.org/1254477", "https://www.wikidata.org/entity/Q3528508"],
+        "title": "Tillangchong Island",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [93.6481, 7.47358],
+            "description": "Treis Island (1254193), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Treis Island",
+            "type": "Point"
+        },
+        "id": "196193",
+        "images": [{
+            "title": "Nicobar Islands 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196705"
+        }, {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"}],
+        "reference": ["https://www.geonames.org/1254193", "https://www.wikidata.org/entity/Q26778815"],
+        "title": "Treis Island",
+        "types": ["Island"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [13.77678, 45.64953],
+            "description": "Trieste (3165185), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Trieste",
+            "type": "Point"
+        },
+        "id": "196365",
+        "images": [{"title": "Trieste 1859", "url": "https://thanados.openatlas.eu/api/display/196883"}],
+        "reference": ["https://www.geonames.org/3165185", "https://www.wikidata.org/entity/Q546"],
+        "title": "Trieste",
+        "types": ["Town"]
+    }, {
+        "description": "",
+        "geometry": {
+            "coordinates": [-12.28284, -37.10573],
+            "description": "Tristan da Cunha (3370682), imported from GeoNames",
+            "shapeType": "centerpoint",
+            "title": "Tristan da Cunha",
+            "type": "Point"
+        },
+        "id": "196126",
+        "images": "",
+        "reference": ["https://www.geonames.org/3370682", "https://www.wikidata.org/entity/Q2454241"],
+        "title": "Tristan da Cunha (Saint Helena)",
+        "types": ["Island"]
+    }]</script>
+    <script>moves = [{
+        "begin": "Thu 30 April 1857",
+        "description": "On its first part of the journey, the frigate Novara sails from Trieste into the southern Arctic Sea and at noon on 3 May 1857 reaches the height of Otranto. ",
+        "end": "Sun 03 May 1857",
+        "id": "196081",
+        "images": {"title": "I Trieste to Madeira", "url": "https://thanados.openatlas.eu/api/display/196387"},
+        "place_from": "196065",
+        "place_to": "196079",
+        "title": "The Novara sails from Trieste to the Southern Adriatic Sea"
+    }, {
+        "begin": "Sun 03 May 1857",
+        "description": "On the morning of 6 May 1857, the Novara lay in front of the entrance to the Strait of Messina, but could not enter the Strait due to a strong north-westerly wind until the morning of 7 May, when the wind finally calmed down. Eventually, at 8 a.m., the steamer Lucia, coming from Corfu, reached them, which took the frigate Novara and the accompanying corvette Carolina in tow again and towed the two ships through the Strait of Messina. ",
+        "end": "Wed 06 May 1857",
+        "id": "196095",
+        "images": {"title": "I Trieste to Madeira", "url": "https://thanados.openatlas.eu/api/display/196387"},
+        "place_from": "196079",
+        "place_to": "196093",
+        "title": "The Novara sails from the Southern Adriatic Sea to the Strait of Messina"
+    }, {
+        "begin": "Thu 07 May 1857",
+        "description": "After passing the Strait of Messina, the Stromboli becomes visible on the evening of 7 May, the coast of Sardinia on 11 May and the coast of North Africa from 13 May onwards. The Carolina left the Novara on 12 May and was not due to arrive in Gibraltar until 23 May, whereas the Novara reached Gibraltar in the afternoon of 20 May 1857. ",
+        "end": "Wed 20 May 1857",
+        "id": "196238",
+        "images": {"title": "I Trieste to Madeira", "url": "https://thanados.openatlas.eu/api/display/196387"},
+        "place_from": "196093",
+        "place_to": "196098",
+        "title": "The Novara sails from the Strait of Messina to the Bay of Gibraltar"
+    }, {
+        "begin": "Sat 30 May 1857",
+        "description": "The Novara had already been waiting for favourable winds for two days, until an easterly wind finally arose on the morning of 20 May and the anchor could be weighed. However, the wind remained unfavourable and delayed the onward journey. So on 1 June, the Novara had to drop anchor a few nautical miles west of the Bay of Malaga off the Spanish Castell de Fuengirola and wait for better conditions. Finally, the wind shifted and on 3 June 1857, the Novara was able to pass through the Strait of Gibraltar together with numerous other ships. ",
+        "end": "Wed 03 June 1857",
+        "id": "196242",
+        "images": {"title": "I Trieste to Madeira", "url": "https://thanados.openatlas.eu/api/display/196387"},
+        "place_from": "196098",
+        "place_to": "196112",
+        "title": "The Novara sails from the Bay of Gibraltar to the Strait of Gibraltar"
+    }, {
+        "begin": "Wed 03 June 1857",
+        "description": "After crossing the Strait of Gibraltar, both the Novara and the Carolina reached Madeira on 8 June 1857. They anchored at 32 fathoms deep, south of the Bastion on the black basalt rock cliff of Loo Rock near Funchal. ",
+        "end": "Mon 08 June 1857",
+        "id": "196243",
+        "images": {"title": "I Trieste to Madeira", "url": "https://thanados.openatlas.eu/api/display/196387"},
+        "place_from": "196112",
+        "place_to": "196115",
+        "title": "The Novara sails from the Strait of Gibraltar to Madeira"
+    }, {
+        "begin": "Wed 17 June 1857",
+        "description": "After a 49-day passage across the Atlantic Ocean and a Line-crossing ceremony on 14 July, the Novara reached Rio de Janeiro on 5 August 1857, which was said to have been home to 200,000 inhabitants at the time, including 80,000 slaves. ",
+        "end": "Wed 05 August 1857",
+        "id": "196244",
+        "images": {"title": "II Madeira to Rio de Janeiro", "url": "https://thanados.openatlas.eu/api/display/196388"},
+        "place_from": "196115",
+        "place_to": "196117",
+        "title": "The Novara sails from Madeira to Rio de Janeiro"
+    }, {
+        "begin": "Mon 31 August 1857",
+        "description": "On the morning of 31 August, the anchor was weighed off Rio de Janeiro and on 5 September, the Novara had already covered 1000 nautical miles. On 12 September 1857, the Novara sailed 300 nautical miles north of the island of Tristan da Cunha, about halfway between South America and Africa. ",
+        "end": "Sat 12 September 1857",
+        "id": "196286",
+        "images": {
+            "title": "III Rio de Janeiro to Cape Town",
+            "url": "https://thanados.openatlas.eu/api/display/196389"
+        },
+        "place_from": "196117",
+        "place_to": "196284",
+        "title": "The Novara sails from Rio de Janeiro to Cape Town 1/2"
+    }, {
+        "begin": "Sat 12 September 1857",
+        "description": "As Table Bay in front of Cape Town is exposed to strong north and north-west winds at that time of year and was no safe harbour, it was decided to anchor in False Bay in front of Simon\u0027s Town, the naval port east of the Cape of Good Hope. ",
+        "end": "Fri 02 October 1857",
+        "id": "196287",
+        "images": {
+            "title": "III Rio de Janeiro to Cape Town",
+            "url": "https://thanados.openatlas.eu/api/display/196389"
+        },
+        "place_from": "196284",
+        "place_to": "196133",
+        "title": "The Novara sails from Rio de Janeiro to Cape Town 2/2"
+    }, {
+        "begin": "Mon 26 October 1857",
+        "description": "After a number of men had to be left behind in hospitals in Rio de Janeiro and Cape Town due to incurable diseases (mostly lung diseases), the Novara was able to replenish its crew in Cape Town. The five new African sailors and ship\u0027s boys were prisoners of war who, according to Hochstetter, had agreed to serve on the Novara. On 1 November, the Novara reaches the Indian Ocean, and after rescuing the monkey \"Beri\", who had gone overboard, and at times very high swell, the ship finally anchors in the bay east of Saint Paul Island after 24 days and 3000 nautical miles. ",
+        "end": "Thu 19 November 1857",
+        "id": "196288",
+        "images": {
+            "title": "IV Cape Town to St. Paul Island",
+            "url": "https://thanados.openatlas.eu/api/display/196390"
+        },
+        "place_from": "196133",
+        "place_to": "196141",
+        "title": "The Novara sails from Cape Town to Saint Paul Island"
+    }, {
+        "begin": "Sun 06 December 1857",
+        "description": "The Novara exploration team spent 17 days on the stormy island of Saint Paul, of which only 6 were sunny days. During their stay, they stayed in the straw thatched huts of three fishermen who live there seasonally but came originally from France and the island of Bourbon (R\u00e9union). After intensive studies of the flora, fauna (mainly penguins and isopods) and the geology, the Novara finally set off for the nearby and also volcanic island of Amsterdam. There, the Novara encountered a whaling ship, to which it provided medical assistance due to an injured crew member. An attempt was then made to find a favourable landing site and two short landings took place. In the process, a sailor must have accidentally started a fire and large parts of the island went up in flames, which has reportedly already happened once before in 1792. The crew marvelled at the fire during the night and eventually the Novara left the island heading north the next day. ",
+        "end": "Mon 07 December 1857",
+        "id": "196289",
+        "images": {"title": "V St. Paul Island to Ceylon", "url": "https://thanados.openatlas.eu/api/display/196391"},
+        "place_from": "196141",
+        "place_to": "196145",
+        "title": "The Novara sails from Saint Paul Island to Amsterdam Island"
+    }, {
+        "begin": "Wed 09 December 1857",
+        "description": "From 16 to 17 December 1857, the Novara crossed the Tropic of Capricorn and exactly at the turn of the year 1857/1858, at 82 degrees and 36 minutes east of Greenwich, it crossed the equator for the second time. On the evening of 7 January, Sri Lanka (Ceylon) finally comes into sight and a Sinhalese pilot comes on board, who had approached the Novara on a small catamaran together with three oarsmen. He navigated the ship past the coral reefs and finally the anchor dropped about a nautical mile off Point de Galle. ",
+        "end": "Thu 07 January 1858",
+        "id": "196290",
+        "images": {"title": "V St. Paul Island to Ceylon", "url": "https://thanados.openatlas.eu/api/display/196391"},
+        "place_from": "196145",
+        "place_to": "196157",
+        "title": "The Novara sails from Amsterdam Island to Sri Lanka (Galle)"
+    }, {
+        "begin": "Sat 16 January 1858",
+        "description": "The journey of the Novara from Sri Lanka (Ceylon) to Madras (Chennai) went in general rather smoothly, with the exception of an incident on 22 January 1858, when a fire broke out due to the high-proof alcohol stored on board for research purposes, which could finally be extinguished by means of hammocks soaked in seawater. It subsequently turned out that the vapours escaping from rusty vessels had caught fire when a sailor entered the room with a lantern. On the evening of 30 January, the Novara anchored about three nautical miles off the coast of Madras. ",
+        "end": "Mon 01 February 1858",
+        "id": "196291",
+        "images": {"title": "VI Ceylon to Madras", "url": "https://thanados.openatlas.eu/api/display/196392"},
+        "place_from": "196157",
+        "place_to": "196175",
+        "title": "The Novara sails from Sri Lanka (Ceylon) to Chennai (Madras)"
+    }, {
+        "begin": "Wed 10 February 1858",
+        "description": "After a pleasant fortnight\u0027s crossing in consistently fine weather, the Imperial and Royal Frigate Novara reached Car Nicobar, the northernmost island of the Nicobar archipelago, and anchored in its northwestern bay. After a boat had approached the Novara but could not be immediately taken into account by the crew, this was initially interpreted by the local population as a sign of hostility, according to Hochstetter. Women and children hid inside the island and the men armed themselves. When some crew members of the Novara finally went ashore unarmed and assured them of their good intentions, the situation relaxed and people approached each other amicably. But the locals remained suspicious towards the strangers and repeatedly inquired about the timing of the Novara\u0027s onward journey. ",
+        "end": "Tue 23 February 1858",
+        "id": "196292",
+        "images": {"title": "VII Madras to Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196393"},
+        "place_from": "196175",
+        "place_to": "196178",
+        "title": "The Novara sails from Madras (Chennai) to Car Nicobar"
+    }, {
+        "begin": "Mon 01 March 1858",
+        "description": "After the local population from Car Nicobar except for the armed men also fled from the Novara on the east and south coasts, the ship set off further south. On 2 March, it reached Battimalv Island, which it could not approach due to the current and wind conditions, and sailed on to Chowra Island, which it reached the following day. ",
+        "end": "Wed 03 March 1858",
+        "id": "196293",
+        "images": {"title": "Battimalv Island 1858", "url": "https://thanados.openatlas.eu/api/display/196689"},
+        "place_from": "196178",
+        "place_to": "196180",
+        "title": "The Novara sails from Car Nicobar past Battimalv Island to Chowra Island"
+    }, {
+        "begin": "Wed 03 March 1858",
+        "description": "The Novara initially anchored on the west side of the uninhabited island of Tillangchong and launched a boat the following day to explore and document the east side of the island while the Novara explored the west side. At the southern tip, the boat was picked up again and the Novara spent the night in a well-protected anchorage in the southeast of the island. The next day, the anchor was lifted and the frigate left Tillangchong. ",
+        "end": "Thu 04 March 1858",
+        "id": "196294",
+        "images": {
+            "title": "Islands Teressa and Chowra 1858",
+            "url": "https://thanados.openatlas.eu/api/display/196702"
+        },
+        "place_from": "196180",
+        "place_to": "196184",
+        "title": "The Novara sails from Chowra Island to Tillangchong Island"
+    }, {
+        "begin": "Sat 06 March 1858",
+        "description": "On the same day after leaving Tillangchong, the Novara reached its anchorage in the so-called West Harbour between Camorta Island to the north and Nancowry Island to the south, opposite the village of ltoe on Nancowry. ",
+        "end": "Sat 06 March 1858",
+        "id": "196295",
+        "images": {"title": "Tillangchong Island 1858a", "url": "https://thanados.openatlas.eu/api/display/196694"},
+        "place_from": "196184",
+        "place_to": "196188",
+        "title": "The Novara sails from Tillangchong Island to Nancowry Island"
+    }, {
+        "begin": "Fri 12 March 1858",
+        "description": "The Novara left Nancowry heading west and sailed first along the island of Camorta to the northwest, but could not overcome the wind and current and eventually continued south. After altogether five days, the ship reached the islands of Treis and Track where the anchor had to be dropped and the two small forested islands could be visited. The landing was only possible with the help of some locals who happened to be near the otherwise uninhabited islands. Treis turned out to be an island inhabited by countless pigeon species, and the first specimen of a Nicobar pigeon was shot for the zoologists during their visit. ",
+        "end": "Wed 17 March 1858",
+        "id": "196296",
+        "images": {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"},
+        "place_from": "196188",
+        "place_to": "196193",
+        "title": "The Novara sails from Nancowry Island to the islands of Treis and Track"
+    }, {
+        "begin": "Wed 17 March 1858",
+        "description": "As the tide rose, the current changed in favour of the Novara, and shortly after sunset it reached its anchorage in a large bay to the northwest of Little Nicobar, which also contained the small island of Pulomilo (Milu). On 18 March in the morning, the crew noticed a noticeable number of canoes along the coast of Little Nicobar, which they again identified as the fleeing population, as only a few local men were encountered during the following landing. The naturalists, however, due to lack of time, preferred to investigate only the small secluded and easier accessible island of Pulomilo instead of the primeval forests and swamps of Little Nicobar. ",
+        "end": "Wed 17 March 1858",
+        "id": "196297",
+        "images": {"title": "Pulomilo Island 1858", "url": "https://thanados.openatlas.eu/api/display/196706"},
+        "place_from": "196193",
+        "place_to": "196197",
+        "title": "The Novara sails from the islands of Treis and Track to Little Nicobar Island"
+    }, {
+        "begin": "Fri 19 March 1858",
+        "description": "In the evening, the anchor was raised and the Novara sailed along the east coast of Little Nicobar into the St. George\u0027s Channel on the north side of Great Nicobar, where it anchored southeast of Kondul Island, which was visited the next day. On the east side of the island the crew found numerous huts, which were again deserted except for a few men. Some crew members made it their mission to walk around the entire island. In the early morning, they set off from the east side towards the north and met up with their comrades on the south side in the evening, completely exhausted and tired. ",
+        "end": "Fri 19 March 1858",
+        "id": "196298",
+        "images": {"title": "St. Georgs Kanal 1858", "url": "https://thanados.openatlas.eu/api/display/196709"},
+        "place_from": "196197",
+        "place_to": "196199",
+        "title": "The Novara sails from Little Nicobar to Kondul Island (Great Nicobar)"
+    }, {
+        "begin": "Tue 23 March 1858",
+        "description": "In the morning, the Novara set sails and headed south along the west coast of Great Nicobar to document the still unknown coastline. The venture failed, however, due to the high surf, which overturned the dispatched boat and the crew had to swim ashore and be painstakingly picked up during the night. In the evening of the following day, the Novara anchored in Galathea Bay at the southern tip of Great Nicobar, into which the Galathea River flows. The next day, a holiday, the crew spent on board the ship, and the following day the last landing on the Nicobar Islands took place before leaving in the evening for the Strait of Malacca. ",
+        "end": "Wed 24 March 1858",
+        "id": "196299",
+        "images": {"title": "VIII Nicobar Islands", "url": "https://thanados.openatlas.eu/api/display/196394"},
+        "place_from": "196199",
+        "place_to": "196205",
+        "title": "The Novara sails from Kondul Island (Great Nicobar) to Galathea Bay (Great Nicobar)"
+    }, {
+        "begin": "Fri 26 March 1858",
+        "description": "After setting off from the Nicobar Islands towards the Strait of Malacca, the weather conditions were initially very bad for sailing and the Novara could only make slow progress. However, this changed on 9 April 1858 and the voyage finally picked up speed. ",
+        "end": "Fri 09 April 1858",
+        "id": "196300",
+        "images": {
+            "title": "IX Nicobar Islands to Singapore",
+            "url": "https://thanados.openatlas.eu/api/display/196395"
+        },
+        "place_from": "196205",
+        "place_to": "196208",
+        "title": "The Novara sails from Galathea Bay (Great Nicobar) to the Strait of Malacca"
+    }, {
+        "begin": "Fri 09 April 1858",
+        "description": "On 14 April 1858, the Novara sailed past the city of Malacca and reached Singapore already the following day, where the ship finally dropped anchor. ",
+        "end": "Thu 15 April 1858",
+        "id": "196301",
+        "images": {
+            "title": "IX Nicobar Islands to Singapore",
+            "url": "https://thanados.openatlas.eu/api/display/196395"
+        },
+        "place_from": "196208",
+        "place_to": "196210",
+        "title": "The Novara sails from the Strait of Malacca to Singapore"
+    }, {
+        "begin": "Thu 22 April 1858",
+        "description": "After the Novara had been supplied with provisions for another six months by the Chinese businessman Whampoa (Hoo Ah Kay), the ship set off for Jakarta. On 25 April 1858, the equator was crossed for the third time... ",
+        "end": "Fri 30 April 1858",
+        "id": "196302",
+        "images": {"title": "X Singapore to Batavia", "url": "https://thanados.openatlas.eu/api/display/196396"},
+        "place_from": "196210",
+        "place_to": "196212",
+        "title": "The Novara sails from Singapore to the Gaspar Strait"
+    }, {
+        "begin": "Fri 30 April 1858",
+        "description": "",
+        "end": "Wed 05 May 1858",
+        "id": "196303",
+        "images": {"title": "X Singapore to Batavia", "url": "https://thanados.openatlas.eu/api/display/196396"},
+        "place_from": "196212",
+        "place_to": "196214",
+        "title": "The Novara sails from the Gaspar Strait to Jakarta (Batavia)"
+    }, {
+        "begin": "Sat 29 May 1858",
+        "description": "",
+        "end": "Tue 15 June 1858",
+        "id": "196304",
+        "images": {"title": "XI Batavia to Manila", "url": "https://thanados.openatlas.eu/api/display/196397"},
+        "place_from": "196214",
+        "place_to": "196217",
+        "title": "The Novara sails from Jakarta (Batavia) to Manila"
+    }, {
+        "begin": "Sat 26 June 1858",
+        "description": "",
+        "end": "Mon 05 July 1858",
+        "id": "196305",
+        "images": {"title": "XII Manila to Hong Kong", "url": "https://thanados.openatlas.eu/api/display/196398"},
+        "place_from": "196217",
+        "place_to": "196222",
+        "title": "The Novara sails from Manila to Hong Kong"
+    }, {
+        "begin": "Sun 18 July 1858",
+        "description": "",
+        "end": "Tue 27 July 1858",
+        "id": "196306",
+        "images": {"title": "XIII Hong Kong to Shanghai", "url": "https://thanados.openatlas.eu/api/display/196399"},
+        "place_from": "196222",
+        "place_to": "196224",
+        "title": "The Novara sails from Hong Kong to Shanghai"
+    }, {
+        "begin": "Wed 11 August 1858",
+        "description": "",
+        "end": "Thu 16 September 1858",
+        "id": "196307",
+        "images": {"title": "XIV Shanghai to Micronesia", "url": "https://thanados.openatlas.eu/api/display/196402"},
+        "place_from": "196224",
+        "place_to": "196227",
+        "title": "The Novara sails from Shanghai to Pohnpei Island (Micronesia)"
+    }, {
+        "begin": "Sat 18 September 1858",
+        "description": "",
+        "end": "Sun 17 October 1858",
+        "id": "196308",
+        "images": {"title": "XV Micronesia to Sydney", "url": "https://thanados.openatlas.eu/api/display/196403"},
+        "place_from": "196227",
+        "place_to": "196230",
+        "title": "The Novara sails from Pohnpei Island (Micronesia) to the Stewart Islands (Solomon Islands)"
+    }, {
+        "begin": "Sun 17 October 1858",
+        "description": "",
+        "end": "Fri 05 November 1858",
+        "id": "196311",
+        "images": {"title": "XV Micronesia to Sydney", "url": "https://thanados.openatlas.eu/api/display/196403"},
+        "place_from": "196230",
+        "place_to": "196232",
+        "title": "The Novara sails from the Stewart Islands (Solomon Islands) to Sydney"
+    }, {
+        "begin": "Tue 07 December 1858",
+        "description": "",
+        "end": "Wed 22 December 1858",
+        "id": "196314",
+        "images": {"title": "XVI Sydney to Auckland", "url": "https://thanados.openatlas.eu/api/display/196404"},
+        "place_from": "196232",
+        "place_to": "196234",
+        "title": "The Novara sails from Sydney to Auckland"
+    }, {
+        "begin": "Sat 08 January 1859",
+        "description": "",
+        "end": "Fri 11 February 1859",
+        "id": "196411",
+        "images": {"title": "XVII Auckland to Tahiti", "url": "https://thanados.openatlas.eu/api/display/196405"},
+        "place_from": "196234",
+        "place_to": "196409",
+        "title": "The Novara sails from Auckland to Tahiti"
+    }, {
+        "begin": "Mon 28 February 1859",
+        "description": "",
+        "end": "Sun 17 April 1859",
+        "id": "196415",
+        "images": {
+            "title": "XVIII Tahiti to Valpara\u00edso",
+            "url": "https://thanados.openatlas.eu/api/display/196406"
+        },
+        "place_from": "196409",
+        "place_to": "196412",
+        "title": "The Novara sails from Tahiti to Valpara\u00edso"
+    }, {
+        "begin": "Wed 11 May 1859",
+        "description": "",
+        "end": "Mon 01 August 1859",
+        "id": "196416",
+        "images": {
+            "title": "XIX Valpara\u00edso to Gibraltar",
+            "url": "https://thanados.openatlas.eu/api/display/196407"
+        },
+        "place_from": "196412",
+        "place_to": "196098",
+        "title": "The Novara sails from Valpara\u00edso to Gibraltar"
+    }, {
+        "begin": "Sun 07 August 1859",
+        "description": "",
+        "end": "Fri 26 August 1859",
+        "id": "196417",
+        "images": {"title": "XX Gibraltar to Trieste", "url": "https://thanados.openatlas.eu/api/display/196408"},
+        "place_from": "196098",
+        "place_to": "196065",
+        "title": "The Novara sails from Gibraltar to Trieste"
+    }]</script>
 
     <div id="map"></div>
     <div id="sidebar">
@@ -23,15 +1206,16 @@
         <div class="timeline">
             <div class="outer">
                 {% for row in moves %}
-                <div class="card hovercard" id="card-{{ row.place_to }}" data-from="{{ row.place_from }}" data-to="{{ row.place_to }}">
-                    <div class="info">
-                        <h3 class="title"> {{ row.begin}} to {{ row.end }}</h3>
-                        <h4>{{ row['title']}}</h4>
-                        <p>{{ row['description'] }}</p>
-                        <img class="sidebar-img" src="{{ row.images['url']}}">
+                    <div class="card hovercard" id="card-{{ row.place_to }}" data-from="{{ row.place_from }}"
+                         data-to="{{ row.place_to }}">
+                        <div class="info">
+                            <h3 class="title"> {{ row.begin }} to {{ row.end }}</h3>
+                            <h4>{{ row['title'] }}</h4>
+                            <p>{{ row['description'] }}</p>
+                            <img class="sidebar-img" src="{{ row.images['url'] }}">
 
+                        </div>
                     </div>
-                </div>
                 {% endfor %}
             </div>
         </div>
@@ -39,7 +1223,7 @@
     </div>
     <div id="sidebar-right"></div>
     <div id="typetext-container"><span id="typetext" class="text-center"></span>
-    <a onclick="getStarted()" class="d-none" id="begin">begin</a></div>
+        <a onclick="getStarted()" class="d-none" id="begin">begin</a></div>
 
 
 

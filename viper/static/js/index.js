@@ -113,7 +113,17 @@ function setRightSidebar(id) {
             if (element.images !== "") images = '<br><br><img src="' + element.images[0].url + '" class="sidebar-img">';
             let popupContent = `<h1>${label}</h1><br><h3>${type}</h3>` + images;
             sidebar_r.innerHTML = popupContent;
+            getAkonData(id)
 
+        }
+    })
+}
+
+function getAkonData(id) {
+    console.log(akon);
+    akon.forEach((source) => {
+        if (element.place_id === parseInt(id)) {
+            console.log(element)
         }
     })
 }
