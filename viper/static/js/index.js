@@ -113,7 +113,17 @@ function setRightSidebar(id) {
             if (element.images !== "") images = '<br><br><img src="' + element.images[0].url + '" class="sidebar-img">';
             let popupContent = `<h1>${label}</h1><br><h3>${type}</h3>` + images;
             sidebar_r.innerHTML = popupContent;
+            getAkonData(id)
 
+        }
+    })
+}
+
+function getAkonData(id) {
+    console.log(akon);
+    akon.forEach((source) => {
+        if (element.place_id === parseInt(id)) {
+            console.log(element)
         }
     })
 }
@@ -241,7 +251,7 @@ Array.from(allCards).forEach((element) => {
 var novaraIcon = L.icon({
     iconUrl: 'static/icons/Novara.png',
     iconSize:     [80, 127], // size of the icon
-    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    iconAnchor:   [10, 140], // point of the icon which will correspond to marker's location
 });
 
 function flyto(id) {
