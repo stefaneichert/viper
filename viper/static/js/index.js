@@ -60,6 +60,11 @@ var sidebar = L.control.sidebar('sidebar', {
 });
 map.addControl(sidebar);
 
+var rightSidebar = L.control.sidebar('sidebar-right', {
+    position: 'right'
+});
+map.addControl(rightSidebar);
+
 setTimeout(function () {
 //    sidebar.show();
 }, 500);
@@ -84,14 +89,49 @@ var RouteStyle1 = {
 var geojson1 = L.geoJSON(routethere, {style: RouteStyle1}).addTo(map);
 var geojson2 = L.geoJSON(routeback, {style: RouteStyle1}).addTo(map);
 
+sidebar_r = document.getElementById('sidebar-right')
+
+function whenClicked(e) {
+    var visible = rightSidebar.isVisible();
+    if (visible === false) rightSidebar.show()
+    let id = e.target.feature.id;
+    const anchor = document.getElementById(id);
+    anchor.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+    setRightSidebar(id)
+
+
+}
+
+function setRightSidebar(id) {
+    places.forEach((element) => {
+        if (element.id === id) {
+            const label = element.title;
+            const pl_id = element.id;
+            const type = element.types[0];
+            let images = "";
+            if (element.images !== "") images = '<br><br><img src="' + element.images[0].url + '" class="sidebar-img">';
+            let popupContent = `<h1><a href="#${pl_id}"><b>${label}</b></a></h1><br>${type}` + images;
+            console.log(popupContent)
+            sidebar_r.innerHTML = popupContent;
+
+
+        }
+    })
+}
+
+function onEachFeature(feature, layer) {
+    //bind click
+    layer.on({
+        click: whenClicked
+    });
+}
+
 function updateGeojson() {
     let placeLayer = new L.geoJSON('', {
         pointToLayer: function (feature, latlng) {
             return L.circleMarker(latlng, CircleStyle);
         },
-        onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties.popupContent);
-        },
+        onEachFeature: onEachFeature,
     });
 
     places.forEach((element) => {
@@ -195,6 +235,7 @@ const allCards = document.getElementsByClassName('hovercard');
 Array.from(allCards).forEach((element) => {
     element.addEventListener("mouseover", () => {
         console.log((element.id))
+        setRightSidebar(element.id)
         flyto(element.id)
     }, false);
 });
