@@ -1,9 +1,12 @@
-const map = L.map('map', {minZoom: 2, maxZoom: 17, worldCopyJump: false}).setView([45.631426845, 13.770929465], 15);
+const map = L.map('map', {
+    minZoom: 2, maxZoom: 12,
+    worldCopyJump: false
+}).setView([45.131426845, 13.770929465], 2);
 
 const OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
-}).addTo(map);
+});
 
 const OpenStreetMap = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -12,7 +15,7 @@ const OpenStreetMap = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png
 
 const Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-});
+}).addTo(map);
 
 const Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -58,7 +61,7 @@ var sidebar = L.control.sidebar('sidebar', {
 map.addControl(sidebar);
 
 setTimeout(function () {
-    sidebar.show();
+//    sidebar.show();
 }, 500);
 
 L.easyButton('<span><></span>', function (btn, map) {
@@ -76,7 +79,6 @@ var RouteStyle1 = {
     "weight": 25,
     "opacity": 0.55
 };
-
 
 
 var geojson1 = L.geoJSON(routethere, {style: RouteStyle1}).addTo(map);
@@ -123,6 +125,24 @@ function updateGeojson() {
 
 PlaceMarker = updateGeojson()
 PlaceMarker.addTo(map)
+let bounds = PlaceMarker.getBounds()
+map.fitBounds(bounds)
+
+var NovaraStart = {
+    strings: ['The Voyage of the Novara'],
+    typeSpeed: 30,
+    showCursor: true,
+    onComplete: (self) => {
+        var d = document.getElementsByClassName("typed-cursor")[0];
+        var b = document.getElementById("begin");
+        d.className += " d-none"
+        setTimeout(function () {
+            b.className += " d-yes"
+        }, 500);
+    },
+};
+
+var starttext = new Typed('#typetext', NovaraStart);
 
 function getLanguage(data) {
     if (data.description) {
@@ -179,7 +199,7 @@ Array.from(allCards).forEach((element) => {
     }, false);
 });
 
-function flyto(id){
+function flyto(id) {
     movement.forEach((element) => {
         if (element.id === id) {
             map.flyTo(element.coords, 8)
@@ -187,10 +207,19 @@ function flyto(id){
     })
 }
 
-function scrollTo(id) {
+function scrollToelem(id) {
     elem = document.getElementById(id)
     console.log(elem)
-    elem.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+    elem.scrollIntoView({block: 'end', behavior: 'smooth'});
+}
+
+function getStarted() {
+    toremove = document.getElementById('typetext-container')
+    toremove.remove();
+    map.flyTo([45.631426845, 13.770929465], 8)
+    setTimeout(function () {
+        sidebar.show();
+    }, 500);
 }
 
 

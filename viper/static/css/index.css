@@ -7,6 +7,10 @@
     height: 100vh;
 }
 
+.leaflet-popup-content-wrapper {
+    width: 180px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -17,135 +21,162 @@ body {
 }
 
 :root {
-  --primary-color: #ffffff;
-  --background-color: #ffffff;
-  --font: sans-serif;
+    --primary-color: #ffffff;
+    --background-color: #ffffff;
+    --font: sans-serif;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 
 /* Timeline Container */
 .timeline {
-  background: var(--primary-color);
-  margin: 20px auto;
-  padding: 20px;
+    background: var(--primary-color);
+    margin: 20px auto;
+    padding: 20px;
 }
 
 /* Card container */
 .card {
-  position: relative;
-  max-width: 400px;
+    position: relative;
+    max-width: 400px;
 }
 
 /* setting padding based on even or odd */
 .card:nth-child(odd) {
-  padding: 30px 0 30px 30px;
+    padding: 30px 0 30px 30px;
 }
+
 .card:nth-child(even) {
-  padding: 30px 30px 30px 0;
+    padding: 30px 30px 30px 0;
 }
+
 /* Global ::before */
 .card::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  border: solid #a3a3a3;
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid #a3a3a3;
 }
 
 /* Setting the border of top, bottom, left */
 .card:nth-child(odd)::before {
-  left: 0;
-  top: -4.5px;
-  bottom: -4.5px;
-  border-width: 5px 0 5px 5px;
-  border-radius: 50px 0 0 50px;
+    left: 0;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
 }
 
 /* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
 @media only screen and (max-width: 400px) {
-  .card:nth-child(odd)::before {
-    top: -5px;
-    bottom: -5px;
-  }
+    .card:nth-child(odd)::before {
+        top: -5px;
+        bottom: -5px;
+    }
 }
 
 /* Setting the border of top, bottom, right */
 .card:nth-child(even)::before {
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-width: 5px 5px 5px 0;
-  border-radius: 0 50px 50px 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
 }
 
 /* Removing the border if it is the first card */
 .card:first-child::before {
-  border-top: 0;
-  border-top-left-radius: 0;
+    border-top: 0;
+    border-top-left-radius: 0;
 }
 
 /* Removing the border if it is the last card  and it's odd */
 .card:last-child:nth-child(odd)::before {
-  border-bottom: 0;
-  border-bottom-left-radius: 0;
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
 }
 
 /* Removing the border if it is the last card  and it's even */
 .card:last-child:nth-child(even)::before {
-  border-bottom: 0;
-  border-bottom-right-radius: 0;
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
 }
 
 /* Information about the timeline */
 .info {
-  display: flex;
-  flex-direction: column;
-  color: gray;
-  border-radius: 10px;
-  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 h1 {
-  padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 h2 {
-  padding: 0.3rem;
+    padding: 0.3rem;
 }
+
 /* Title of the card */
 .title {
-  color: #000000;
-  position: relative;
+    color: #000000;
+    position: relative;
 }
 
 /* Timeline dot  */
 .title::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 999px;
-  border: 3px solid #6d6d6d;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    border: 3px solid #6d6d6d;
 }
 
 /* text right if the card is even  */
 .card:nth-child(even) > .info > .title {
-  text-align: right;
+    text-align: right;
 }
 
 /* setting dot to the left if the card is odd */
 .card:nth-child(odd) > .info > .title::before {
-  left: -45px;
+    left: -45px;
 }
 
 /* setting dot to the right if the card is odd */
 .card:nth-child(even) > .info > .title::before {
-  right: -45px;
+    right: -45px;
+}
+
+#typetext-container {
+    position: absolute;
+    color: white;
+    top: 30vh;
+    left: 0vw;
+    z-index: 2000;
+    font-size: 4rem;
+    font-weight: bolder;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background: rgba(0, 0, 0, 0.62);
+    width: 100%;
+    text-align: center;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-yes {
+    font-size: 2rem!important;
+    display: block!important;
 }
 
 
