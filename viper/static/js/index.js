@@ -113,19 +113,48 @@ function setRightSidebar(id) {
             if (element.images !== "") images = '<br><br><img src="' + element.images[0].url + '" class="sidebar-img">';
             let popupContent = `<h1>${label}</h1><br><h3>${type}</h3>` + images;
             sidebar_r.innerHTML = popupContent;
-            getAkonData(id)
+            popupContent += getAkonData(id)
+            popupContent += getAnnoData(id)
 
+            sidebar_r.innerHTML = popupContent;
         }
     })
 }
 
 function getAkonData(id) {
-    console.log(akon);
-    akon.forEach((source) => {
-        if (element.place_id === parseInt(id)) {
-            console.log(element)
+    let returnme = ''
+    akon.forEach((elem) => {
+        if (elem.place_id === parseInt(id)) {
+            let label = elem.description
+            let source = '<a href="https://data.onb.ac.at/AKON/' + elem.akon_id + '" target="_blank">' + elem.source + ' (' + elem.akon_id + ')</a>'
+            let type = elem.type;
+            let image = '<img class="sidebar-img" src=' + elem.image + '>';
+            let iiif = elem.metadata
+
+            let returnHTML = '<h3>' + label + ' (' + type + ') </h3>From: '+ source + image
+            if (iiif !== "") returnHTML += '<a href="/iiif/?manifest=' + elem.metadata + '" target="_blank">IIIF</a>'
+            returnme += returnHTML
         }
     })
+    return(returnme)
+}
+
+function getAnnoData(id) {
+    let returnme = ''
+    anno.forEach((elem) => {
+        if (elem.Id === parseInt(id)) {
+            let label = elem.description
+            let source = '<a href="'+ elem.link + '" target="_blank">' + elem.source + ' (' + elem.title + ', ' + elem.timestamp +', p.' + elem.page+')</a>'
+            let type = elem.type;
+            let image = '<img class="sidebar-img" src=' + elem.image + '>';
+            let iiif = elem.metadata
+
+            let returnHTML = '<h3>' + label + ' (' + type + ') </h3>From: '+ source + image
+            if (iiif !== "") returnHTML += '<a href="/iiif/?manifest=' + elem.metadata + '" target="_blank">IIIF</a>'
+            returnme += returnHTML
+        }
+    })
+    return(returnme)
 }
 
 function onEachFeature(feature, layer) {

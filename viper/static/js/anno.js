@@ -1,5 +1,4 @@
-anno = {
-    "0": {
+anno = [{
         "Place": "Nikobaren",
         "ID": 196205,
         "title": "Wiener Zeitung",
@@ -14,8 +13,7 @@ anno = {
         "metadata": "https://iiif.onb.ac.at/presentation/ANNO/wrz18371104/manifest/",
         "link_fulltext": "https://anno.onb.ac.at/cgi-content/anno?aid=wrz&datum=18371104&seite=3&zoom=33&query=%22Nikobaren%22&ref=anno-search",
         "image": "https://iiif.onb.ac.at/images/ANNO/wrz18371104/00000003/full/full/0/default.jpg"
-    },
-    "1": {
+    },{
         "Place": "St.Paul Insel",
         "ID": 196141,
         "title": "Wiener Zeitung",
@@ -30,8 +28,7 @@ anno = {
         "metadata": "https://iiif.onb.ac.at/presentation/ANNO/wrz19070701/manifest/",
         "link_fulltext": "https://anno.onb.ac.at/cgi-content/anno?aid=wrz&datum=19070701&query=%22St.-Paul-Insel%22&ref=anno-search&seite=5",
         "image": "https://iiif.onb.ac.at/images/ANNO/wrz19070701/00000005/full/full/0/default.jpg"
-    },
-    "2": {
+    },{
         "Place": "Bucht von Algeciras",
         "ID": 196098,
         "title": "Wiener Zeitung ",
@@ -46,8 +43,7 @@ anno = {
         "metadata": "https://iiif.onb.ac.at/presentation/ANNO/wrz18570714/manifest/",
         "link_fulltext": "https://anno.onb.ac.at/cgi-content/anno?aid=wrz&datum=18570914&query=%22Bucht%22+%22von%22+%22Algeciras%22&ref=anno-search",
         "image": "https://iiif.onb.ac.at/images/ANNO/wrz18570714/00000001/full/full/0/default.jpg"
-    },
-    "3": {
+    },{
         "Place": "Tahiti",
         "ID": 196409,
         "title": "Wiener Zeitung",
@@ -62,8 +58,7 @@ anno = {
         "metadata": "https://iiif.onb.ac.at/presentation/ANNO/wrz18440815/manifest/",
         "link_fulltext": "https://anno.onb.ac.at/cgi-content/anno?aid=wrz&datum=18440815&seite=2&zoom=33&query=%22Tahiti%22&ref=anno-search",
         "image": "https://iiif.onb.ac.at/images/ANNO/wrz18440815/00000002/full/full/0/default.jpg"
-    },
-    "4": {
+    },{
         "Place": "Hafen in Auckland",
         "ID": 196234,
         "title": "Wiener Zeitung",
@@ -78,8 +73,7 @@ anno = {
         "metadata": "https://iiif.onb.ac.at/presentation/ANNO/wrz18590405/manifest/",
         "link_fulltext": "https://anno.onb.ac.at/cgi-content/anno?aid=wrz&datum=18590405&seite=20&zoom=42&query=%22Tahiti%22&ref=anno-search",
         "image": "https://iiif.onb.ac.at/images/ANNO/wrz18590405/00000020/full/full/0/default.jpg"
-    },
-    "5": {
+    },{
         "Place": "Tahiti",
         "ID": 196409,
         "title": "Wiener Zeitung",
@@ -94,8 +88,7 @@ anno = {
         "metadata": "https://iiif.onb.ac.at/presentation/ANNO/wrz18620701/manifest/",
         "link_fulltext": "https://anno.onb.ac.at/cgi-content/anno?aid=wrz&datum=18620701&seite=14&zoom=49&query=%22Tahiti%22&ref=anno-search",
         "image": "https://iiif.onb.ac.at/images/ANNO/wrz18620701/00000014/full/full/0/default.jpg"
-    },
-    "6": {
+    },{
         "Place": "Tahiti",
         "ID": 196409,
         "title": "Wiener Zeitung",
@@ -110,8 +103,7 @@ anno = {
         "metadata": "https://iiif.onb.ac.at/presentation/ANNO/wrz18620701/manifest/",
         "link_fulltext": "https://anno.onb.ac.at/cgi-content/anno?aid=wrz&datum=18620701&seite=14&zoom=49&query=%22Tahiti%22&ref=anno-search",
         "image": "https://iiif.onb.ac.at/images/ANNO/wrz18620701/00000014/full/full/0/default.jpg"
-    },
-    "7": {
+    },{
         "Place": "Shanghai",
         "ID": 196224,
         "title": "Wiener Zeitung",
@@ -126,8 +118,7 @@ anno = {
         "metadata": "https://iiif.onb.ac.at/presentation/ANNO/wrz18431018/manifest/",
         "link_fulltext": "https://anno.onb.ac.at/cgi-content/anno?aid=wrz&datum=18431018&seite=2&zoom=33&query=%22Shanghai%22&ref=anno-search",
         "image": "https://iiif.onb.ac.at/images/ANNO/wrz18431018/00000002/full/full/0/default.jpg"
-    },
-    "8": {
+    },{
         "Place": "Hongkong",
         "ID": 196222,
         "title": "Wiener Zeitung",
@@ -143,4 +134,4 @@ anno = {
         "link_fulltext": "https://anno.onb.ac.at/cgi-content/anno?aid=wrz&datum=18590118&seite=17&zoom=33&query=%22Shanghai%22&ref=anno-search",
         "image": "https://iiif.onb.ac.at/images/ANNO/wrz18590118/00000017/full/full/0/default.jpg"
     }
-}
+]
