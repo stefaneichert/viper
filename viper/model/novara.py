@@ -63,9 +63,10 @@ def get_novara_moves() -> list[dict[str, Any]]:
 
 def get_places_for_move_events() -> dict[int, int]:
     req_places = requests.get(
-        f"{app.config['THANADOS_API']}/system_class/place",
+        f"{app.config['THANADOS_API']}/query/",
         params={
-            'type_id': 197085,
+            'entities':
+                ['196145', '196764', '198037', '196098', '196697', '196178', '196180', '196205', '196212', '198040', '196199', '196197', '196188', '196227', '196234', '196217', '196175', '196115', '196157', '196222', '196214', '196409', '196117', '196224', '196133', '196210', '196232', '196065', '196412', '196284', '196887', '196707', '196884', '196141', '196874', '196079', '196230', '196112', '196208', '196093', '196703', '196184', '196193', '196365', '196126'],
             'format': 'loud',
             'limit': 0},
         timeout=30)
@@ -80,17 +81,10 @@ def get_places_for_move_events() -> dict[int, int]:
 
 
 def get_moves() -> list[dict[str, Any]]:
-    req_expedition = requests.get(
-        f"{app.config['THANADOS_API']}/entity/196078",
-        params={'format': 'loud'},
-        timeout=30)
-    move_ids = \
-        [move['id'].rsplit('/', 1)[-1]
-         for move in req_expedition.json()['part_of']]
     req_moves = requests.get(
         f"{app.config['THANADOS_API']}/query",
         params={
-            'entities': move_ids,
+            'entities': ['196290', '196411', '196288', '196293', '196294', '196300', '196417', '196306', '196304', '196299', '196298', '196244', '196292', '196305', '196296', '196308', '196286', '196287', '196289', '196307', '196302', '196291', '196314', '196415', '196242', '196303', '196297', '196095', '196311', '196243', '196301', '196238', '196295', '196081', '196416'],
             'limit': 0,
             'format': 'loud',
             'column': 'begin_from',

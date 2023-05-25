@@ -18,13 +18,13 @@ def about() -> str:
     return render_template('index.html', moves=moves)
 
 
-@app.route('/novara/places')
+@app.route('/novara/places/')
 def novara_places() -> str:
     places = get_novara_places()
     return render_template('novara.html', entities=places)
 
 
-@app.route('/novara/moves')
+@app.route('/novara/moves/')
 def novara_move() -> str:
     moves = get_novara_moves()
     return render_template('novara.html', entities=moves)
