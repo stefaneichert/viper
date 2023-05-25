@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, request
 
 from viper import app
 from viper.model.novara import get_novara_places, get_novara_moves
@@ -31,7 +31,8 @@ def novara_move() -> str:
     moves = get_novara_moves()
     return render_template('novara.html', entities=moves)
 
-@app.route('/iiif/<manifest>')
-def iiif(manifest:str) -> str:
-    return render_template('iiif.html', manifest=manifest)
+
+@app.route('/iiif/')
+def iiif() -> str:
+    return render_template('iiif.html', manifest=request.args.get('manifest'))
 
