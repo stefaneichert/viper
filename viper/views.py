@@ -2,7 +2,6 @@ from flask import render_template, request
 
 from viper import app
 from viper.model.novara import get_novara_places, get_novara_moves
-import re
 
 
 @app.route('/')
@@ -10,11 +9,10 @@ def about() -> str:
     moves = get_novara_moves()
     for row in moves:
         s = row['description']
-        if s != None:
-
+        if s is not None:
             start = s.find('##en_') + 8
-            end = s.find('_en##', start) -2
-            row['description'] = (s[start:end])
+            end = s.find('_en##', start) - 2
+            row['description'] = s[start:end]
         else:
             row['description'] = ""
     return render_template('index.html', moves=moves)
@@ -35,4 +33,3 @@ def novara_move() -> str:
 @app.route('/iiif/')
 def iiif() -> str:
     return render_template('iiif.html', manifest=request.args.get('manifest'))
-
