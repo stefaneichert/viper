@@ -170,6 +170,10 @@ h2 {
     text-align: center;
 }
 
+#typetext-container > a:hover{
+    text-decoration: underline;
+}
+
 .d-none {
     display: none;
 }
