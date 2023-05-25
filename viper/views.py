@@ -9,10 +9,15 @@ import re
 def about() -> str:
     moves = get_novara_moves()
     for row in moves:
-        result = re.search('##en_;(.*)_en##', str(row['description']))
-        if result:
-            row['description'] = result.group(1)
-    return render_template('index.html', placedata=get_novara_places(), moves=moves)
+        s = row['description']
+        if s != None:
+
+            start = s.find('##en_') + 8
+            end = s.find('_en##', start) -2
+            row['description'] = (s[start:end])
+        else:
+            row['description'] = ""
+    return render_template('index.html', moves=moves)
 
 
 @app.route('/novara/places')

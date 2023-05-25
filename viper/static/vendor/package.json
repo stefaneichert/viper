@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@elfalem/leaflet-curve": "^0.9.2",
     "@openglobus/og": "^0.16.2",
     "@turf/turf": "^6.5.0",
     "bootstrap": "^5.2.3",

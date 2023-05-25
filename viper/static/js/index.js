@@ -11,7 +11,7 @@ const OpenStreetMap = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png
 });
 
 const Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+    attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
 
 const Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
@@ -23,9 +23,9 @@ const Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net
 });
 
 const Thunderforest_SpinalMap = L.tileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey={apikey}', {
-	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	apikey: 'b3c55fb5010a4038975fd0a0f4976e64',
-	maxZoom: 22
+    attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    apikey: 'b3c55fb5010a4038975fd0a0f4976e64',
+    maxZoom: 22
 });
 
 let baseMaps = {
@@ -61,9 +61,26 @@ setTimeout(function () {
     sidebar.show();
 }, 500);
 
-L.easyButton('<span>s</span>', function(btn, map){
+L.easyButton('<span><></span>', function (btn, map) {
     sidebar.toggle();
 }).addTo(map);
+
+var RouteStyle1 = {
+    "color": "#888888",
+    "weight": 25,
+    "opacity": 0.55
+};
+
+var RouteStyle1 = {
+    "color": "#888888",
+    "weight": 25,
+    "opacity": 0.55
+};
+
+
+
+var geojson1 = L.geoJSON(routethere, {style: RouteStyle1}).addTo(map);
+var geojson2 = L.geoJSON(routeback, {style: RouteStyle1}).addTo(map);
 
 function updateGeojson() {
     let placeLayer = new L.geoJSON('', {
@@ -77,35 +94,35 @@ function updateGeojson() {
 
     places.forEach((element) => {
         const label = element.title;
+        const pl_id = element.id;
         const type = element.types[0];
         const geom = element.geometry
         let images = "";
-        if (element.images !== "") images = '<br><br><img src="' +  element.images[0].url + '" style="max-width: 150px; max-height=170px">';
+        if (element.images !== "") images = '<br><br><img src="' + element.images[0].url + '" style="max-width: 150px; max-height=170px">';
 
         if (!geom) return;
 
 
-
-            const popupContent = `<b>${label}</b><br>${type}` + images;
-            console.log(popupContent)
-            const geojsonFeature = {
-                type: "Feature",
-                id: element.id,
-                properties: {
-                    name: label,
-                    type: type,
-                    popupContent: popupContent
-                },
-                geometry: geom,
-            };
-            placeLayer.addData(geojsonFeature);
+        const popupContent = `<a href="#${pl_id}"><b>${label}</b></a><br>${type}` + images;
+        console.log(popupContent)
+        const geojsonFeature = {
+            type: "Feature",
+            id: element.id,
+            properties: {
+                name: label,
+                type: type,
+                popupContent: popupContent
+            },
+            geometry: geom,
+        };
+        placeLayer.addData(geojsonFeature);
 
     });
     return placeLayer
 }
 
 PlaceMarker = updateGeojson()
-    PlaceMarker.addTo(map)
+PlaceMarker.addTo(map)
 
 function getLanguage(data) {
     if (data.description) {
@@ -122,3 +139,59 @@ function getLanguage(data) {
         return '';
     }
 }
+
+polyline = []
+movement = []
+
+function drawPolyline() {
+
+    moves.forEach((element) => {
+        let id = element.place_from;
+        console.log(id)
+        places.forEach((place) => {
+            if (place.id === id) {
+                if (place.geometry.coordinates) {
+                    Point = new L.LatLng(place.geometry.coordinates[1], place.geometry.coordinates[0]);
+                    polyline.push(Point)
+                    movepoint = {'id': id, 'coords': [place.geometry.coordinates[1], place.geometry.coordinates[0]]}
+                    movement.push(movepoint)
+                }
+            }
+
+        })
+    });
+    var firstpolyline = new L.Polyline(polyline, {
+        color: 'red',
+        weight: 3,
+        opacity: 0.5,
+        smoothFactor: 1
+    });
+    //firstpolyline.addTo(map);
+}
+
+drawPolyline()
+
+const allCards = document.getElementsByClassName('hovercard');
+Array.from(allCards).forEach((element) => {
+    element.addEventListener("mouseover", () => {
+        console.log((element.id))
+        flyto(element.id)
+    }, false);
+});
+
+function flyto(id){
+    movement.forEach((element) => {
+        if (element.id === id) {
+            map.flyTo(element.coords, 8)
+        }
+    })
+}
+
+function scrollTo(id) {
+    elem = document.getElementById(id)
+    console.log(elem)
+    elem.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+}
+
+
+
