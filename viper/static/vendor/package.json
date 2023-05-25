@@ -10,6 +10,7 @@
     "leaflet-sidebar-v2": "^3.2.3",
     "leaflet.animatedmarker": "^1.0.0",
     "mapbox-gl": "^2.14.1",
+    "mirador": "^3.3.0",
     "typed.js": "^2.0.16"
   }
 }

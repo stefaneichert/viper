@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script src="/static/vendor/node_modules/mirador/dist/mirador.min.js"></script>
+
+<main>
+<div id="my-mirador"/>
+</main>
+<script>img_manifest = "{{manifest}}"</script>
+<script src="/static/js/iiif.js"></script>
+
+{% endblock %}%}

@@ -31,3 +31,7 @@ def novara_move() -> str:
     moves = get_novara_moves()
     return render_template('novara.html', entities=moves)
 
+@app.route('/iiif/<manifest>')
+def iiif(manifest:str) -> str:
+    return render_template('iiif.html', manifest=manifest)
+
