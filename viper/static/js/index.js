@@ -80,7 +80,7 @@ var RouteStyle1 = {
 };
 
 var RouteStyle2 = {
-    "color": "#888888",
+    "color": "#878061",
     "weight": 15,
     "opacity": 0.55
 };
