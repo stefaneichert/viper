@@ -115,6 +115,7 @@ function setRightSidebar(id) {
             sidebar_r.innerHTML = popupContent;
             popupContent += getAkonData(id)
             popupContent += getAnnoData(id)
+            popupContent += getTraveldata(id)
 
             sidebar_r.innerHTML = popupContent;
         }
@@ -131,7 +132,7 @@ function getAkonData(id) {
             let image = '<img class="sidebar-img" src=' + elem.image + '>';
             let iiif = elem.metadata
 
-            let returnHTML = '<h3>' + label + ' (' + type + ') </h3>From: '+ source + image
+            let returnHTML = '<br><br><h3>' + label + ' (' + type + ') </h3>From: '+ source + image
             if (iiif !== "") returnHTML += '<a href="/iiif/?manifest=' + elem.metadata + '" target="_blank">IIIF</a>'
             returnme += returnHTML
         }
@@ -142,14 +143,33 @@ function getAkonData(id) {
 function getAnnoData(id) {
     let returnme = ''
     anno.forEach((elem) => {
-        if (elem.Id === parseInt(id)) {
-            let label = elem.description
+        if (elem.ID === parseInt(id)) {
+            let label = elem.Place
             let source = '<a href="'+ elem.link + '" target="_blank">' + elem.source + ' (' + elem.title + ', ' + elem.timestamp +', p.' + elem.page+')</a>'
             let type = elem.type;
             let image = '<img class="sidebar-img" src=' + elem.image + '>';
             let iiif = elem.metadata
 
-            let returnHTML = '<h3>' + label + ' (' + type + ') </h3>From: '+ source + image
+            let returnHTML = '<br><br><h3>' + label + ' (' + type + ') </h3>From: '+ source + image
+            if (iiif !== "") returnHTML += '<a href="/iiif/?manifest=' + elem.metadata + '" target="_blank">IIIF</a>'
+            returnme += returnHTML
+        }
+    })
+    return(returnme)
+}
+
+function getTraveldata(id) {
+    let returnme = ''
+    travelogues.forEach((elem) => {
+        if (elem.ID === parseInt(id)) {
+            let label = elem.Place
+            let source = '<a href="'+ elem.link + '" target="_blank">' + elem.source + ' (' + elem.title + ', ' + elem.timestamp +', p.' + elem.page+')</a>'
+            let type = elem.type;
+            let image = ""
+            if (elem.image !== "") image = '<img class="sidebar-img" src=' + elem.image + '>';
+            let iiif = elem.metadata
+
+            let returnHTML = '<br><br><h3>' + label + ' (' + type + ') </h3>From: '+ source + image
             if (iiif !== "") returnHTML += '<a href="/iiif/?manifest=' + elem.metadata + '" target="_blank">IIIF</a>'
             returnme += returnHTML
         }
