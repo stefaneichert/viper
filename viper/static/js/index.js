@@ -144,7 +144,7 @@ function getAnnoData(id) {
     let returnme = ''
     anno.forEach((elem) => {
         if (elem.ID === parseInt(id)) {
-            let label = elem.Place
+            let label = elem.place
             let source = '<a href="'+ elem.link + '" target="_blank">' + elem.source + ' (' + elem.title + ', ' + elem.timestamp +', p.' + elem.page+')</a>'
             let type = elem.type;
             let image = '<img class="sidebar-img" src=' + elem.image + '>';
@@ -162,7 +162,7 @@ function getTraveldata(id) {
     let returnme = ''
     travelogues.forEach((elem) => {
         if (elem.ID === parseInt(id)) {
-            let label = elem.Place
+            let label = elem.place
             let source = '<a href="'+ elem.link + '" target="_blank">' + elem.source + ' (' + elem.title + ', ' + elem.timestamp +', p.' + elem.page+')</a>'
             let type = elem.type;
             let image = ""
@@ -309,7 +309,7 @@ function flyto(id) {
             hovermarkers.clearLayers()
             let hoverpoint = L.marker(element.coords, {icon: novaraIcon})
             hovermarkers.addLayer(hoverpoint)
-            map.flyTo(element.coords, 8)
+            map.flyTo(element.coords, 6)
         }
     })
 }
