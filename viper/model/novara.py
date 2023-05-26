@@ -3,7 +3,7 @@ from typing import Any
 
 import requests
 
-from data.static_data import moves_dict
+from viper.data.static_data import moves_dict
 from viper import app
 
 
