@@ -75,13 +75,13 @@ L.easyButton('<span><></span>', function (btn, map) {
 
 var RouteStyle1 = {
     "color": "#888888",
-    "weight": 25,
+    "weight": 15,
     "opacity": 0.55
 };
 
-var RouteStyle1 = {
+var RouteStyle2 = {
     "color": "#888888",
-    "weight": 25,
+    "weight": 15,
     "opacity": 0.55
 };
 
@@ -89,7 +89,7 @@ let hovermarkers = L.layerGroup().addTo(map)
 
 
 var geojson1 = L.geoJSON(routethere, {style: RouteStyle1}).addTo(map);
-var geojson2 = L.geoJSON(routeback, {style: RouteStyle1}).addTo(map);
+var geojson2 = L.geoJSON(routeback, {style: RouteStyle2}).addTo(map);
 
 sidebar_r = document.getElementById('sidebar-right')
 
